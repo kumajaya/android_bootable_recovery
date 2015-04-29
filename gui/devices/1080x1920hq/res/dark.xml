@@ -895,21 +895,13 @@
 			<object type="checkbox">
 				<placement x="%col1_x%" y="%row1_2_y%" />
 				<font resource="body2" color="%text%" />
-				<text>Use Aroma File Manager</text>
-				<data variable="aromafm" />
-				<image checked="checkbox_true" unchecked="checkbox_false" />
-			</object>
-			
-			<object type="checkbox">
-				<placement x="%col1_x%" y="%row1_3a_y%" />
-				<font resource="body2" color="%text%" />
 				<text>Use bookmark function for file lists</text>
 				<data variable="bookmark" />
 				<image checked="checkbox_true" unchecked="checkbox_false" />
 			</object>
 			
 			<object type="checkbox">
-				<placement x="%col1_x%" y="%row2_2_y%" />
+				<placement x="%col1_x%" y="%row1_3a_y%" />
 				<font resource="body2" color="%text%" />
 				<text>Show auto generated backup name</text>
 				<data variable="auto_generate" />
@@ -917,12 +909,20 @@
 			</object>
 			
 			<object type="checkbox">
-				<placement x="%col1_x%" y="%row2_3a_y%" />
+				<placement x="%col1_x%" y="%row2_2_y%" />
 				<font resource="body2" color="%text%" />
 				<text>Use flashify script for image flashing</text>
 				<data variable="use_flashify" />
 				<image checked="checkbox_true" unchecked="checkbox_false" />
 			</object>
+
+			<!--object type="checkbox">
+				<placement x="%col1_x%" y="%row2_3a_y%" />
+				<font resource="body2" color="%text%" />
+				<text>Use Aroma File Manager</text>
+				<data variable="aromafm" />
+				<image checked="checkbox_true" unchecked="checkbox_false" />
+			</object-->
 			
 			<object type="text" color="%text_dark%">
 				<font resource="caption" />
