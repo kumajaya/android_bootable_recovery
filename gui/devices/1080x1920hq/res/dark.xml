@@ -941,7 +941,7 @@
 			<object type="checkbox">
 				<placement x="%col1_x%" y="%row4_2a_y%" />
 				<font resource="body2" color="%text%" />
-				<text>Samsung button layout for navbar</text>
+				<text>Use alternative button layout for navbar</text>
 				<data variable="navbar_sams" />
 				<image checked="checkbox_true" unchecked="checkbox_false" />
 			</object>
