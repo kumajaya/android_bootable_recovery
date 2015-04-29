@@ -110,7 +110,6 @@
 		<resource name="btn_raised_usbstorage" type="image" filename="btn_raised_usbstorage" />
 		<resource name="btn_raised_cancel" type="image" filename="btn_raised_cancel" />
 		<resource name="btn_raised_noinstall" type="image" filename="btn_raised_noinstall" />
-		<resource name="btn_raised_changetheme" type="image" filename="btn_raised_changetheme" />
 		<resource name="btn_raised_changesplash" type="image" filename="btn_raised_changesplash" />
 		<resource name="btn_raised_mr_addfile" type="image" filename="btn_raised_mr_addfile" />
 		<resource name="btn_raised_wipeencryption" type="image" filename="btn_raised_wipeencryption" />
@@ -127,7 +126,6 @@
 		<resource name="dialog_label_storage" type="image" filename="dialog_label_storage" />
 		<resource name="dialog_label_bookmark" type="image" filename="dialog_label_bookmark" />
 		<resource name="dialog_label_restoresettings" type="image" filename="dialog_label_restoresettings" />
-		<resource name="dialog_label_settheme" type="image" filename="dialog_label_settheme" />
 		<resource name="dialog_label_color" type="image" filename="dialog_label_color" />
 		<resource name="dialog_label_encryption" type="image" filename="dialog_label_encryption" />
 		<resource name="dialog_label_decryption" type="image" filename="dialog_label_decryption" />
