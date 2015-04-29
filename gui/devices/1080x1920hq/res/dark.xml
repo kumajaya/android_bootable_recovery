@@ -744,17 +744,9 @@
 				<data variable="auto_generate" />
 				<image checked="checkbox_true" unchecked="checkbox_false" />
 			</object>
-			
-			<object type="checkbox">
-				<placement x="%col1_x%" y="%row2_2_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Use flashify script for image flashing</text>
-				<data variable="use_flashify" />
-				<image checked="checkbox_true" unchecked="checkbox_false" />
-			</object>
 
 			<!--object type="checkbox">
-				<placement x="%col1_x%" y="%row2_3a_y%" />
+				<placement x="%col1_x%" y="%row2_2_y%" />
 				<font resource="body2" color="%text%" />
 				<text>Use Aroma File Manager</text>
 				<data variable="aromafm" />
@@ -797,21 +789,7 @@
 				<placement x="%btn_raised_left_x%" y="%row8_1_y%" />
 				<font resource="menu" color="%text_button%" />
 				<image resource="btn_raised_changesplash" />
-				<actions>
-					<action function="cmd">
-					if [ -f "/sdcard/TWRP/flashify/flashify.zip" ];
-					then cd /;
-					else
-					mkdir "/sdcard/TWRP/flashify";					
-					mkdir "/cache/twrp";
-					unzip -o "/sdcard/TWRP/theme/ui.zip" -d "/cache/twrp";
-					cp -r /cache/twrp/flashify/* /sdcard/TWRP/flashify;
-					chmod 777 "/sdcard/TWRP/flashify/flashify.zip";
-					rm -r /cache/twrp;
-					fi
-					</action>
-					<action function="page">theme_splash</action>
-				</actions>
+				<action function="page">theme_splash</action>
 			</object>
 			
 			<object type="button">
@@ -1116,19 +1094,9 @@
 			</object>
 			
 			<object type="checkbox">
-				<condition var1="use_flashify" var2="0" />
 				<placement x="%col1_x%" y="%row6_3a_y%" />
 				<font resource="body2" color="%text%" />
 				<text>Install repacked recovery</text>
-				<data variable="auto_flash_repack" />
-				<image checked="checkbox_true" unchecked="checkbox_false" />
-			</object>
-			
-			<object type="checkbox">
-				<condition var1="use_flashify" var2="1" />
-				<placement x="%col1_x%" y="%row6_3a_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Automatically install repacked recovery</text>
 				<data variable="auto_flash_repack" />
 				<image checked="checkbox_true" unchecked="checkbox_false" />
 			</object>
@@ -1268,7 +1236,6 @@
 			
 			<object type="slider">
 				<conditions>
-					<condition var1="use_flashify" var2="0" />
 					<condition var1="tw_busy" var2="0" />
 					<condition var1="tw_splash_img_name" />
 					<condition var1="tw_splash_jpg_name" />
@@ -1298,45 +1265,6 @@
 				</actions>
 			</object>
 			
-			<object type="slider">
-				<conditions>
-					<condition var1="use_flashify" var2="1" />
-					<condition var1="tw_busy" var2="0" />
-					<condition var1="tw_splash_img_name" />
-					<condition var1="tw_splash_jpg_name" />
-					<condition var1="auto_flash_repack" var2="1" />
-					<condition var1="inject_theme" var2="0" />
-				</conditions>
-				<placement x="%center_x%" y="%slider_y%" placement="5" />
-				<resource base="slider" used="slider_used" touch="handle_h" />
-				<actions>
-					<action function="cmd">
-					i=/sdcard/TWRP/flashify;
-					rm $i/boot*.img $i/*recovery*.img $i/radio*.img $i/modem*.img;
-					</action>
-					<action function="cmd">
-					cd "/data/local/AIK-mobile";
-					cp "%tw_splash_img_path%/%tw_splash_img_name%" "/data/local/AIK-mobile/original.img";
-					chmod 777 "/data/local/AIK-mobile/original.img";
-					busybox sh "unpackimg.sh" "original.img";
-					cp "%tw_splash_jpg_path%/%tw_splash_jpg_name%" "/data/local/AIK-mobile/ramdisk/twres/images/curtain.jpg";
-					busybox sh "repackimg.sh";
-					cp "image-new.img" "%tw_splash_img_path%/custom_splash_twrp.img";
-					chown -R media_rw:media_rw "%tw_splash_img_path%/custom_splash_twrp.img";
-					mv "image-new.img" "/sdcard/TWRP/flashify/recovery.img";
-					busybox sh "cleanup.sh";
-					rm "original.img";
-					</action>
-					<action function="set">tw_fm_type=File</action>
-					<action function="set">tw_fm_isfolder=0</action>
-					<action function="set">tw_back=theme_splash</action>
-					<action function="queueclear"></action>
-					<action function="set">tw_filename=/sdcard/TWRP/flashify/flashify.zip</action>
-					<action function="queuezip"></action>
-					<action function="flash">theme_splash_flash</action>
-				</actions>
-			</object>
-			
 			<object type="text" color="%text_dark%">
 				<conditions>
 					<condition var1="tw_busy" var2="0" />
@@ -1352,7 +1280,6 @@
 			
 			<object type="slider">
 				<conditions>
-					<condition var1="use_flashify" var2="0" />
 					<condition var1="tw_busy" var2="0" />
 					<condition var1="tw_splash_img_name" />
 					<condition var1="tw_splash_jpg_name" />
@@ -1362,10 +1289,6 @@
 				<placement x="%center_x%" y="%slider_y%" placement="5" />
 				<resource base="slider" used="slider_used" touch="handle_h" />
 				<actions>
-					<action function="cmd">
-					i=/sdcard/TWRP/flashify;
-					rm $i/boot*.img $i/*recovery*.img $i/radio*.img $i/modem*.img;
-					</action>
 					<action function="cmd">
 					cd "/data/local/AIK-mobile";
 					cp "%tw_splash_img_path%/%tw_splash_img_name%" "/data/local/AIK-mobile/original.img";
@@ -1395,57 +1318,6 @@
 					<action function="set">tw_back=theme_splash</action>
 					<action function="set">tw_flash_partition=/recovery;</action>
 					<action function="page">flash_image_confirm</action>
-				</actions>
-			</object>
-			
-			<object type="slider">
-				<conditions>
-					<condition var1="use_flashify" var2="1" />
-					<condition var1="tw_busy" var2="0" />
-					<condition var1="tw_splash_img_name" />
-					<condition var1="tw_splash_jpg_name" />
-					<condition var1="auto_flash_repack" var2="1" />
-					<condition var1="inject_theme" var2="1" />
-				</conditions>
-				<placement x="%center_x%" y="%slider_y%" placement="5" />
-				<resource base="slider" used="slider_used" touch="handle_h" />
-				<actions>
-					<action function="cmd">
-					i=/sdcard/TWRP/flashify;
-					rm $i/boot*.img $i/*recovery*.img $i/radio*.img $i/modem*.img;
-					</action>
-					<action function="cmd">
-					cd "/data/local/AIK-mobile";
-					cp "%tw_splash_img_path%/%tw_splash_img_name%" "/data/local/AIK-mobile/original.img";
-					chmod 777 "/data/local/AIK-mobile/original.img";
-					busybox sh "unpackimg.sh" "original.img";
-					cp "%tw_splash_jpg_path%/%tw_splash_jpg_name%" "/data/local/AIK-mobile/ramdisk/twres/images/curtain.jpg";
-					cd "ramdisk/twres";
-					rm *.xml;
-					rm -r images/*.png;
-					rm -r fonts/*;
-					mkdir "/cache/twrp";
-					unzip -o "/sdcard/TWRP/theme/ui.zip" -d "/cache/twrp";
-					cp -r /cache/twrp/images/* "/data/local/AIK-mobile/ramdisk/twres/images";
-					cp -r /cache/twrp/*.xml "/data/local/AIK-mobile/ramdisk/twres";
-					cp -r /cache/twrp/fonts/* "/data/local/AIK-mobile/ramdisk/twres/fonts";
-					cd "/data/local/AIK-mobile";
-					busybox sh "repackimg.sh";
-					cp "image-new.img" "/sdcard/TWRP/flashify/recovery.img";
-					mv "image-new.img" "%tw_splash_img_path%/custom_theme_twrp.img";
-					chown -R media_rw:media_rw "%tw_splash_img_path%/custom_theme_twrp.img";
-					busybox sh "cleanup.sh";
-					rm "original.img";
-					rm -r "/cache/twrp";
-					rm -r "/sdcard/TWRP/theme/ui.zip";
-					</action>
-					<action function="set">tw_fm_type=File</action>
-					<action function="set">tw_fm_isfolder=0</action>
-					<action function="set">tw_back=theme_splash</action>
-					<action function="queueclear"></action>
-					<action function="set">tw_filename=/sdcard/TWRP/flashify/flashify.zip</action>
-					<action function="queuezip"></action>
-					<action function="flash">theme_splash_flash</action>
 				</actions>
 			</object>
 			
@@ -1529,7 +1401,6 @@
 				<listitem name="This function uses the">1</listitem>
 				<listitem name="mobile AIK (Android Image Kitchen)">2</listitem>
 				<listitem name="to replace the TWRP splash screen (curtain)">2</listitem>
-				<listitem name="and the stock recovery theme (optional)">2</listitem>
 				<listitem name="inside the recovery.img file.">2</listitem>
 				<listitem name="">2</listitem>
 				<listitem name="The mobile AIK is not part of the theme">2</listitem>
@@ -1546,20 +1417,10 @@
 				<listitem name="must match the screen resolution,">2</listitem>
 				<listitem name="e.g. &quot;1920x1080&quot; for full HD devices.">2</listitem>
 				<listitem name="">2</listitem>
-				<listitem name="If the option &quot;Include theme&quot; is selected,">2</listitem>
-				<listitem name="the theme (only the current color) will also">2</listitem>
-				<listitem name="be copied into the unpacked recovery image,">2</listitem>
-				<listitem name="replacing the stock TWRP theme.">2</listitem>
-				<listitem name="">2</listitem>
 				<listitem name="The recovery will then be repacked to">2</listitem>
-				<listitem name="to a &quot;custom_splash_twrp.img&quot; (splash only)">2</listitem>
-				<listitem name="or to a &quot;custom_theme_twrp.img&quot; (theme)">2</listitem>
+				<listitem name="a &quot;custom_splash_twrp.img&quot;">2</listitem>
 				<listitem name="and saved to the same folder as the">2</listitem>
 				<listitem name="stock recovery.">2</listitem>
-				<listitem name="">2</listitem>
-				<listitem name="If the option &quot;automatically install...&quot; is selected,">2</listitem>
-				<listitem name="the repacked image will directly be flashed">2</listitem>
-				<listitem name="and replace the stock recovery.">2</listitem>
 				<listitem name="">2</listitem>
 			</object>
 			
@@ -2390,30 +2251,10 @@
 			</object>
 			
 			<object type="action">
-				<condition var1="use_flashify" var2="0" />
 				<condition var1="tw_filename" op="modified" />
 				<action function="page">flash_image_confirm</action>
 			</object>
-
-			<object type="action">
-				<condition var1="use_flashify" var2="1" />
-				<condition var1="tw_filename" op="modified" />
-				<actions>
-					<action function="set">tw_fm_type=File</action>
-					<action function="set">tw_fm_isfolder=0</action>
-					<action function="set">tw_image_type=none</action>
-					<action function="cmd">
-					i=/sdcard/TWRP/flashify;
-					rm $i/boot*.img $i/*recovery*.img $i/radio*.img $i/modem*.img;
-					</action>
-					<action function="set">tw_back=install_image</action>
-					<action function="set">tw_filecheck=/sdcard/TWRP/flashify/flashify.zip</action>
-					<action function="set">tw_existpage=flash_image_confirm_f</action>
-					<action function="set">tw_notexistpage=flash_image_confirm_f</action>
-					<action function="page">filecheck</action>
-				</actions>
-			</object>
-
+			
 			<object type="action">
 				<touch key="back" />
 				<action function="page">install</action>
@@ -2932,326 +2773,6 @@
 			<object type="action">
 				<touch key="back" />
 				<action function="page">%tw_back%</action>
-			</object>
-
-			<object type="action">
-				<touch key="home" />
-				<action function="page">main</action>
-			</object>
-		</page>
-		
-		<page name="flash_image_confirm_f">
-		
-			<object type="template" name="body" />
-			
-			<object type="template" name="ab_ex" />
-			
-			<object type="template" name="statusbarinfo" />
-			
-			<object type="button">
-				<placement x="%ab_back_x%" y="%ab_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="actionbar_back" highlightresource="actionbar_back_hl" />
-				<action function="page">main</action>
-			</object>
-			
-			<object type="image">
-				<image resource="bc_install_image" />
-				<placement x="%ab_bc_x%" y="%ab_y%" />
-			</object>
-			
-			<object type="button">
-				<placement x="%btn_float_x%" y="%row1_2_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="btn_float_flashifyinfo" highlightresource="btn_float_flashifyinfo_hl" />
-				<action function="page">flash_image_info</action>
-			</object>
-			
-			<object type="text" color="%text_actionbar%">
-				<font resource="title" />
-				<placement x="%col1_x_indent%" y="%row1_2_y%" placement="2" />
-				<text>Flashify Script</text>
-			</object>
-			
-			<object type="text" color="%text_dark%">
-				<font resource="caption" />
-				<placement x="%col1_x%" y="%row2_2_y%"  />
-				<text>File</text>
-			</object>
-			
-			<object type="text" color="%text%">
-				<font resource="body2" />
-				<placement x="%col1_x%" y="%row2_3_y%" />
-				<text>%tw_file%</text>
-			</object>
-			
-			<object type="text" color="%text_dark%">
-				<font resource="caption" />
-				<placement x="%col1_x%" y="%row3_2_y%"  />
-				<text>Folder</text>
-			</object>
-			
-			<object type="text" color="%text%">
-				<font resource="body2" />
-				<placement x="%col1_x%" y="%row3_3_y%" />
-				<text>%tw_zip_location%</text>
-			</object>
-			
-			<object type="text" color="%text_dark%">
-				<font resource="caption" />
-				<placement x="%col1_x%" y="%row4_2_y%"  />
-				<text>Image Type</text>
-			</object>
-			
-			<object type="button">
-				<condition var1="tw_image_type" op="!=" var2="recovery" />
-				<placement x="%col1_x%" y="%row4_3_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Recovery Image</text>
-				<image resource="radio_false" />
-				<action function="set">tw_image_type=recovery</action>
-			</object>
-			
-			<object type="button">
-				<condition var1="tw_image_type" var2="recovery" />
-				<placement x="%col1_x%" y="%row4_3_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Recovery Image</text>
-				<image resource="radio_true" />
-				<action function="set">tw_image_type=recovery</action>
-			</object>
-			
-			<object type="button">
-				<condition var1="tw_image_type" op="!=" var2="boot" />
-				<placement x="%col1_x%" y="%row5_1a_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Boot Image</text>
-				<image resource="radio_false" />
-				<action function="set">tw_image_type=boot</action>
-			</object>
-
-			<object type="button">
-				<condition var1="tw_image_type" var2="boot" />
-				<placement x="%col1_x%" y="%row5_1a_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Boot Image</text>
-				<image resource="radio_true" />
-				<action function="set">tw_image_type=boot</action>
-			</object>
-
-			<object type="button">
-				<condition var1="tw_image_type" op="!=" var2="radio" />
-				<placement x="%col1_x%" y="%row5_3_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Radio / Modem Image</text>
-				<image resource="radio_false" />
-				<action function="set">tw_image_type=radio</action>
-			</object>
-
-			<object type="button">
-				<condition var1="tw_image_type" var2="radio" />
-				<placement x="%col1_x%" y="%row5_3_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Radio / Modem Image</text>
-				<image resource="radio_true" />
-				<action function="set">tw_image_type=radio</action>
-			</object>
-			
-			<object type="image">
-				<condition var1="tw_fileexists" var2="0" />
-				<condition var1="partitionlisterror" var2="1" />
-				<placement x="%col1_x%" y="%row7_1_y%" />
-				<image resource="icon_info" />
-			</object>
-			
-			<object type="text" color="%text_highlight%">
-				<condition var1="tw_fileexists" var2="0" />
-				<condition var1="partitionlisterror" var2="1" />
-				<font resource="body2" />
-				<placement x="%col1_x_indent%" y="%row7_1_y%" />
-				<text>Install the flashify script to continue!</text>
-			</object>
-			
-			<object type="button">
-				<condition var1="tw_fileexists" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%btn_raised_right_x%" y="%row8_1_y%" placement="1" />
-				<font resource="font_medium" color="%text_button%" />
-				<image resource="btn_raised_installscript" />
-				<action function="cmd">
-				mkdir "/sdcard/TWRP/flashify";					
-				mkdir "/cache/twrp";
-				unzip -o "/sdcard/TWRP/theme/ui.zip" -d "/cache/twrp";
-				cp -r /cache/twrp/flashify/* /sdcard/TWRP/flashify;
-				chmod 777 "/sdcard/TWRP/flashify/flashify.zip";
-				rm -r /cache/twrp;
-				</action>
-				<action function="set">tw_fileexists=1</action>
-			</object>
-			
-			<object type="text" color="%text_dark%">
-				<conditions>
-					<condition var1="tw_fileexists" var2="1" />
-					<condition var1="tw_image_type" var2="recovery" />
-				</conditions>
-				<font resource="caption" />
-				<placement x="%center_x%" y="%slider_text_y%" placement="5" />
-				<text>Swipe to install Recovery Image</text>
-			</object>
-
-			<object type="text" color="%text_dark%">
-				<conditions>
-					<condition var1="tw_fileexists" var2="1" />
-					<condition var1="tw_image_type" var2="boot" />
-				</conditions>
-				<font resource="caption" />
-				<placement x="%center_x%" y="%slider_text_y%" placement="5" />
-				<text>Swipe to install Boot Image</text>
-			</object>
-
-			<object type="text" color="%text_dark%">
-				<conditions>
-					<condition var1="tw_fileexists" var2="1" />
-					<condition var1="tw_image_type" var2="radio" />
-				</conditions>
-				<font resource="caption" />
-				<placement x="%center_x%" y="%slider_text_y%" placement="5" />
-				<text>Swipe to install Radio / Modem</text>
-			</object>
-
-			<object type="text" color="%text_highlight%">
-				<conditions>
-					<condition var1="tw_fileexists" var2="1" />
-					<condition var1="tw_image_type" op="=" var2="none" />
-				</conditions>
-				<font resource="body2" />
-				<placement x="%center_x%" y="%row8_2_y%" placement="4" />
-				<text>Select Image Type!</text>
-			</object>
-			
-			<object type="slider">
-				<conditions>
-					<condition var1="tw_fileexists" var2="1" />
-					<condition var1="tw_image_type" op="!=" var2="none" />
-				</conditions>
-				<placement x="%center_x%" y="%slider_y%" placement="5" />
-				<resource base="slider" used="slider_used" touch="handle_h" />
-				<actions>
-					<action function="queueclear"></action>
-					<action function="cmd">
-					cp &quot;%tw_filename%&quot; /sdcard/TWRP/flashify/%tw_image_type%.img;
-					</action>
-					<action function="set">tw_filename=/sdcard/TWRP/flashify/flashify.zip</action>
-					<action function="queuezip"></action>
-					<action function="flash">flash_zip</action>
-				</actions>
-			</object>
-			
-			<object type="action">
-				<touch key="back" />
-				<actions>
-					<action function="cancelzip"></action>
-					<action function="page">install_image</action>
-				</actions>
-			</object>
-
-			<object type="action">
-				<touch key="home" />
-				<action function="page">main</action>
-			</object>
-		</page>
-		
-		<page name="flash_image_info">
-			<object type="template" name="body" />
-			
-			<object type="template" name="ab_ex" />
-
-			<object type="template" name="statusbarinfo" />
-
-			<object type="button">
-				<placement x="%ab_back_x%" y="%ab_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="actionbar_back" highlightresource="actionbar_back_hl" />
-				<action function="page">main</action>
-			</object>
-			
-			<object type="image">
-				<image resource="bc_install_image" />
-				<placement x="%ab_bc_x%" y="%ab_y%" />
-			</object>
-			
-			<object type="text" color="%text_actionbar%">
-				<font resource="title" />
-				<placement x="%col1_x_indent%" y="%row1_2_y%" placement="2" />
-				<text>Flashify Script</text>
-			</object>
-			
-			<object type="text" color="%text_actionbar%">
-				<font resource="body1" />
-				<placement x="%col1_x_indent%" y="%row1_2_y%" />
-				<text>Information</text>
-			</object>
-
-			<object type="text" color="%text_dark%">
-				<font resource="caption" />
-				<placement x="%col1_x%" y="%row2_2_y%"  />
-				<text>How it works</text>
-			</object>
-			
-			<object type="image">
-				<image resource="divider" />
-				<placement x="%center_x%" y="%row2_3_y%" placement="4" />
-			</object>
-
-			<object type="listbox">
-				<placement x="%col1_x%" y="%row2_3_y%" w="%console_width%" h="%console_action_height%" />
-				<fastscroll rectcolor="%highlight%" w="%fastscroll_rectw%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%" />
-				<background color="%background%" />
-				<font resource="body2" spacing="%textbox_spacing%" color="%text%" />
-				<listitem name="This will directly flash .img files.">1</listitem>
-				<listitem name="The selected image file is copied to a">2</listitem>
-				<listitem name="temporary directory and renamed according">2</listitem>
-				<listitem name="to the selected image type.">2</listitem>
-				<listitem name="The script will then search for a partition">2</listitem>
-				<listitem name="matching the selected type.">2</listitem>
-				<listitem name="">2</listitem>
-				<listitem name="If a matching partition is found">2</listitem>
-				<listitem name="the image will be flashed.">2</listitem>
-				<listitem name="">2</listitem>
-				<listitem name="If no matching partition is found">2</listitem>
-				<listitem name="the script will not flash anything.">2</listitem>
-				<listitem name="">2</listitem>
-				<listitem name="This script will only work on devices">2</listitem>
-				<listitem name="with standard by-name partition naming,">2</listitem>
-				<listitem name="e.g. &quot;boot&quot;, &quot;recovery&quot; and ">2</listitem>
-				<listitem name="&quot;modem&quot; or &quot;radio&quot;.">2</listitem>
-				<listitem name="If your device uses other partition names">2</listitem>
-				<listitem name="the script will let you know and stop.">2</listitem>
-				<listitem name="">2</listitem>
-				<listitem name="Be certain the image you have selected also">2</listitem>
-				<listitem name="has the correct type selected. Do not">2</listitem>
-				<listitem name="attempt to flash an image to the incorrect">2</listitem>
-				<listitem name="partition and then reboot, or you may need">2</listitem>
-				<listitem name="to use fastboot/ODIN to recover!">2</listitem>
-				<listitem name="">2</listitem>
-			</object>
-			
-			<object type="image">
-				<image resource="divider" />
-				<placement x="%center_x%" y="%row7_3_y%" placement="4" />
-			</object>
-			
-			<object type="button">
-				<placement x="%btn_float_x%" y="%row7_3a_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="btn_float_accept" />
-				<highlight color="%highlight_color%" />
-				<action function="page">flash_image_confirm_f</action>
-			</object>
-			
-			<object type="action">
-				<touch key="back" />
-				<action function="page">flash_image_confirm_f</action>
 			</object>
 
 			<object type="action">
@@ -10400,7 +9921,6 @@
 				<font resource="menu" color="%text_button%" />
 				<image resource="db_ok" highlightresource="db_ok_hl" />
 				<actions>
-					<action function="set">use_flashify=0</action>
 					<action function="restoredefaultsettings"></action>
 					<action function="set">inject_theme=0</action>
 					<action function="set">auto_flash_repack=0</action>
@@ -10470,7 +9990,6 @@
 				<font resource="menu" color="%text_button%" />
 				<image resource="db_ok" highlightresource="db_ok_hl" />
 				<actions>
-					<action function="set">use_flashify=0</action>
 					<action function="set">inject_theme=0</action>
 					<action function="set">auto_flash_repack=0</action>
 					<action function="set">aromafm=0</action>
