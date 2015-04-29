@@ -786,20 +786,12 @@
 			
 			<object type="button">
 				<highlight color="%highlight_color%" />
-				<placement x="%btn_raised_left_x%" y="%row8_1_y%" />
+				<placement x="%btn_raised_right_x%" y="%row8_1_y%" placement="1" />
 				<font resource="menu" color="%text_button%" />
 				<image resource="btn_raised_changesplash" />
 				<action function="page">theme_splash</action>
 			</object>
 			
-			<object type="button">
-				<highlight color="%highlight_color%" />
-				<placement x="%btn_raised_right_x%" y="%row8_1_y%" placement="1" />
-				<font resource="menu" color="%text_button%" />
-				<image resource="btn_raised_changetheme" />
-				<action function="page">theme_swap</action>
-			</object>
-			
 			<object type="action">
 				<touch key="home" />
 				<action function="page">main</action>
@@ -808,170 +800,6 @@
 			<object type="action">
 				<touch key="back" />
 				<action function="page">main</action>
-			</object>
-			
-		</page>
-		
-		<page name="theme_swap">
-			
-			<object type="action">
-				<condition var1="bookmark" var2="1" />
-				<action function="set">tw_zip_location=%location_themes%</action>
-			</object>
-			
-			<object type="template" name="body" />
-			
-			<object type="fileselector">
-				<condition var1="list_font" var2="big" />
-				<placement x="%col1_x%" y="%row_ab_ex_y%" w="%fileselector_width%" h="%fileselector_install_height%" />
-				<fastscroll rectcolor="%text_highlight%" w="%fastscroll_w%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%" />
-				<separator color="%linecolor%" height="%fileselector_separatorheight%" />
-				<sort name="tw_gui_sort_order" />
-				<icon folder="folder_icon" file="file_icon" />
-				<background color="%background%" />
-				<font resource="body1" spacing="%fileselector_spacing%" color="%text%" highlightcolor="%highlight%" />
-				<filter extn=".zip" folders="1" files="1" />
-				<path name="tw_zip_location" default="/sdcard" />
-				<data name="tw_filename" />
-				<selection name="tw_file" />
-			</object>
-			
-			<object type="fileselector">
-				<condition var1="list_font" var2="small" />
-				<placement x="%col1_x%" y="%row_ab_ex_y%" w="%fileselector_width%" h="%fileselector_install_height%" />
-				<fastscroll rectcolor="%text_highlight%" w="%fastscroll_w%" rectw="%fastscroll_rectw%" recth="%fastscroll_recth%" />
-				<separator color="%linecolor%" height="%fileselector_separatorheight%" />
-				<sort name="tw_gui_sort_order" />
-				<icon folder="folder_icon" file="file_icon" />
-				<background color="%background%" />
-				<font resource="caption" spacing="%fileselector_spacing%" color="%text%" highlightcolor="%highlight%" />
-				<filter extn=".zip" folders="1" files="1" />
-				<path name="tw_zip_location" default="/sdcard" />
-				<data name="tw_filename" />
-				<selection name="tw_file" />
-			</object>
-			
-			<object type="template" name="ab_ex" />
-			
-			<object type="template" name="statusbarinfo" />
-			
-			<object type="button">
-				<placement x="%ab_back_x%" y="%ab_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="actionbar_back" highlightresource="actionbar_back_hl" />
-				<action function="page">main</action>
-			</object>
-
-			<object type="image">
-				<image resource="bc_settings_theme" />
-				<placement x="%ab_bc_x%" y="%ab_y%" />
-				<font resource="menu" color="%text_button%" />
-			</object>
-
-			<object type="image">
-				<condition var1="bookmark" var2="1" />
-				<condition var1="tw_zip_location" var2="%location_themes%" />
-				<placement x="%ab_btn2_x%" y="%ab_y%" />
-				<image resource="actionbar_pinned" />
-			</object>
-			
-			<object type="button">
-				<condition var1="bookmark" var2="1" />
-				<condition var1="dialog_hide_folder" var2="1" />
-				<condition var1="tw_zip_location" op="!=" var2="%location_themes%" />
-				<placement x="%ab_btn2_x%" y="%ab_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="actionbar_pin" highlightresource="actionbar_pin_hl" />
-				<actions>
-					<action function="set">location_themes=%tw_zip_location%</action>
-					<action function="set">tw_zip_location=%location_themes%</action>
-				</actions>
-			</object>
-			
-			<object type="button">
-				<condition var1="bookmark" var2="1" />
-				<condition var1="dialog_hide_folder" var2="0" />
-				<condition var1="tw_zip_location" op="!=" var2="%location_themes%" />
-				<placement x="%ab_btn2_x%" y="%ab_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="actionbar_pin" highlightresource="actionbar_pin_hl" />
-				<actions>
-					<action function="set">dialog_context=loc_theme</action>
-					<action function="overlay">dialog_folder</action>
-				</actions>
-			</object>
-			
-			<object type="button">
-				<condition var1="list_font" var2="big" />
-				<placement x="%ab_btn1_x%" y="%ab_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="actionbar_font_big" highlightresource="actionbar_font_big_hl" />
-				<actions>
-					<action function="set">list_font=small</action>
-				</actions>
-			</object>
-			
-			<object type="button">
-				<condition var1="list_font" var2="small" />
-				<placement x="%ab_btn1_x%" y="%ab_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="actionbar_font_small" highlightresource="actionbar_font_small_hl" />
-				<actions>
-					<action function="set">list_font=big</action>
-				</actions>
-			</object>
-			
-			<object type="text" color="%text_actionbar%">
-				<font resource="title" />
-				<placement x="%col1_x_indent%" y="%row1_2_y%" placement="2" />
-				<text>Select Theme Zip</text>
-			</object>
-			
-			<object type="text" color="%text_actionbar%">
-				<font resource="body1" />
-				<placement x="%col1_x_indent%" y="%row1_2_y%" />
-				<text>%tw_zip_location%</text>
-			</object>
-			
-			<object type="image">
-				<image resource="divider_wide" />
-				<placement x="%center_x%" y="%row_btn_y%" placement="4" />
-			</object>
-			
-			<object type="button">
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="row_btn_y" />
-				<font resource="menu" color="%text%" />
-				<text>SELECT STORAGE</text>
-				<image resource="mb_empty_s" />
-				<actions>
-					<action function="set">tw_back=theme_swap</action>
-					<action function="overlay">dialog_storage</action>
-				</actions>
-			</object>
-			
-			<object type="action">
-				<actions>
-					<action function="set">tw_fm_type=File</action>
-					<action function="set">tw_fm_isfolder=0</action>
-				</actions>
-			</object>
-
-			<object type="action">
-				<condition var1="tw_filename" op="modified" />
-				<actions>
-					<action function="overlay">dialog_settheme</action>
-				</actions>
-			</object>
-			
-			<object type="action">
-				<touch key="home" />
-				<action function="page">main</action>
-			</object>
-
-			<object type="action">
-				<touch key="back" />
-				<action function="page">theme_settings</action>
 			</object>
 			
 		</page>
@@ -9698,67 +9526,6 @@
 					<action function="set">tw_zip_location=%location_install_splash_jpg%</action>
 					<action function="set">dialog_context=none</action>
 					<action function="overlay"></action>
-				</actions>
-			</object>
-			
-			<object type="action">
-				<touch key="power+voldown" />
-				<action function="screenshot" />
-			</object>
-			
-		</page>
-		
-		<page name="dialog_settheme">
-			<background color="%transparent%" />
-			
-			<object type="image">
-				<placement x="%bg_storage_x%" y="%bg_storage_y%" />
-				<image resource="dialog_bg" />
-			</object>
-			
-			<object type="image">
-				<placement x="%bg_storage_x%" y="%bg_storage_y%" />
-				<image resource="dialog_label_settheme" />
-			</object>
-			
-			<object type="text" color="%text%">
-				<font resource="body2" />
-				<placement x="%storage_indent_x%" y="%db_text1_y%" />
-				<text>Change to %tw_file%?</text>
-			</object>
-			
-			<object type="text" color="%text%">
-				<font resource="body2" />
-				<placement x="%storage_indent_x%" y="%db_text2a_y%" />
-				<text>Reloading the theme might cause</text>
-			</object>
-			
-			<object type="text" color="%text%">
-				<font resource="body2" />
-				<placement x="%storage_indent_x%" y="%db_text3a_y%" />
-				<text>a recovery reboot on some devices!</text>
-			</object>
-			
-			<object type="button">
-				<placement x="%db_left_x%" y="%db_y%" />
-				<font resource="menu" color="%text_button%" />
-				<image resource="db_cancel" highlightresource="db_cancel_hl" />
-				<actions>
-					<action function="overlay"></action>
-				</actions>
-			</object>
-			
-			<object type="button">
-				<placement x="%db_right_x%" y="%db_y%" />
-				<font resource="menu" color="%text_button%" />
-				<image resource="db_ok" highlightresource="db_ok_hl" />
-				<actions>
-					<action function="cmd">
-					cp &quot;%tw_filename%&quot; /sdcard/TWRP/theme/ui.zip;
-					chown -R media_rw:media_rw /sdcard/TWRP/theme
-					</action>
-					<action function="sleep">1000</action>
-					<action function="reload"></action>
 				</actions>
 			</object>
 			
