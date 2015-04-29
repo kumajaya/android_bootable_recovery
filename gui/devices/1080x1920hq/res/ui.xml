@@ -117,22 +117,6 @@
 		
 		<resource name="btn_appenddate" type="image" filename="btn_appenddate" />
 		
-		<resource name="clr_red" type="image" filename="clr_red" />
-		<resource name="clr_pink" type="image" filename="clr_pink" />
-		<resource name="clr_indigo" type="image" filename="clr_indigo" />
-		<resource name="clr_blue" type="image" filename="clr_blue" />
-		<resource name="clr_lightblue" type="image" filename="clr_lightblue" />
-		<resource name="clr_teal" type="image" filename="clr_teal" />
-		<resource name="clr_green" type="image" filename="clr_green" />
-		<resource name="clr_lightgreen" type="image" filename="clr_lightgreen" />
-		<resource name="clr_lime" type="image" filename="clr_lime" />
-		<resource name="clr_amber" type="image" filename="clr_amber" />
-		<resource name="clr_orange" type="image" filename="clr_orange" />
-		<resource name="clr_deeporange" type="image" filename="clr_deeporange" />
-		<resource name="clr_brown" type="image" filename="clr_brown" />
-		<resource name="clr_grey" type="image" filename="clr_grey" />
-		<resource name="clr_bluegrey" type="image" filename="clr_bluegrey" />
-		
 		<resource name="background" type="image" filename="background" />
 		<resource name="divider" type="image" filename="divider" />
 		<resource name="divider_list" type="image" filename="divider_list" />
@@ -246,7 +230,6 @@
 		<resource name="icon_mail" type="image" filename="icon_mail" />
 		<resource name="icon_palette" type="image" filename="icon_palette" />
 		<resource name="icon_cake" type="image" filename="icon_cake" />
-		<resource name="icon_color" type="image" filename="icon_color" />
 		
 		<resource name="file_icon" type="image" filename="file" />
 		<resource name="folder_icon" type="image" filename="folder" />
