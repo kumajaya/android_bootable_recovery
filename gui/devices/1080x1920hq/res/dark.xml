@@ -955,16 +955,8 @@
 			</object>
 			
 			<object type="checkbox">
-				<placement x="%col1_x%" y="%row5_2a_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Use alternative lock screen</text>
-				<data variable="alt_lock" />
-				<image checked="checkbox_true" unchecked="checkbox_false" />
-			</object>
-			
-			<object type="checkbox">
 				<condition var1="tw_no_cpu_temp" var2="0" />
-				<placement x="%col1_x%" y="%row6_1_y%" />
+				<placement x="%col1_x%" y="%row5_2a_y%" />
 				<font resource="body2" color="%text%" />
 				<text>Show CPU temperature</text>
 				<data variable="show_cpu_temp" />
@@ -10194,28 +10186,18 @@
 		
 			<background color="%darktransparent%" />
 			
-			<object type="slider">
-				<condition var1="alt_lock" var2="0" />
-				<placement x="%center_x%" y="0" placement="5" />
-				<resource base="slider_lock" used="slider_lock_used" touch="slider_lock_handle" />
-				<action function="overlay"></action>
-			</object>
-			
 			<object type="image">
-				<condition var1="alt_lock" var2="1" />
 				<image resource="unlock_icon" />
 				<placement x="%center_x%" y="%row4_1_y%" placement="4" />
 			</object>
 
 			<object type="text" color="%text_light%">
-				<condition var1="alt_lock" var2="1" />
 				<font resource="caption" />
 				<placement x="%center_x%" y="%slider_text_y%" placement="5" />
 				<text>Swipe to Unlock</text>
 			</object>
 			
 			<object type="slider">
-				<condition var1="alt_lock" var2="1" />
 				<placement x="%center_x%" y="%slider_y%" placement="5" />
 				<resource base="slider" used="slider_used" touch="handle_h" />
 				<action function="overlay"></action>
@@ -11318,7 +11300,6 @@
 				<actions>
 					<action function="set">use_flashify=0</action>
 					<action function="restoredefaultsettings"></action>
-					<action function="set">alt_lock=0</action>
 					<action function="set">inject_theme=0</action>
 					<action function="set">auto_flash_repack=0</action>
 					<action function="set">aromafm=0</action>
@@ -11389,7 +11370,6 @@
 				<image resource="db_ok" highlightresource="db_ok_hl" />
 				<actions>
 					<action function="set">use_flashify=0</action>
-					<action function="set">alt_lock=0</action>
 					<action function="set">inject_theme=0</action>
 					<action function="set">auto_flash_repack=0</action>
 					<action function="set">aromafm=0</action>

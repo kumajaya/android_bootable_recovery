@@ -274,9 +274,6 @@
 		
 		<resource name="slider" type="image" filename="slider" />
 		<resource name="slider_used" type="image" filename="slider_used" />
-		<resource name="slider_lock" type="image" filename="slider_lock" />
-		<resource name="slider_lock_used" type="image" filename="slider_lock_used" />
-		<resource name="slider_lock_handle" type="image" filename="slider_lock_handle" />
 		<resource name="handle" type="image" filename="handle" />
 		<resource name="handle_h" type="image" filename="handle_h" />
 		
@@ -310,7 +307,6 @@
 		<!--theme settings-->
 		<variable name="theme_version" value="286X_v1" />
 		<variable name="use_flashify" value="0" persist="1" />
-		<variable name="alt_lock" value="0" persist="1" />
 		<variable name="inject_theme" value="0" persist="1" />
 		<variable name="auto_flash_repack" value="0" persist="1" />
 		<variable name="aromafm" value="0" persist="1" />
