@@ -1205,7 +1205,7 @@
 					<action function="set">tw_text_color_highlight=CDDC39FF</action>
 					<action function="set">tw_folder=images_lime</action>
 					<action function="page">set_color</action>
-				</action>
+				</actions>
 			</object>
 			
 			<object type="button">
@@ -1247,7 +1247,7 @@
 					<action function="set">tw_text_color_highlight=FF5722FF</action>
 					<action function="set">tw_folder=images_deeporange</action>
 					<action function="page">set_color</action>
-				</action>
+				</actions>
 			</object>
 			
 			<object type="button">
@@ -1289,7 +1289,7 @@
 					<action function="set">tw_text_color_highlight=607D8BFF</action>
 					<action function="set">tw_folder=images_bluegrey</action>
 					<action function="page">set_color</action>
-				</action>
+				</actions>
 			</object>
 			
 			<object type="action">
