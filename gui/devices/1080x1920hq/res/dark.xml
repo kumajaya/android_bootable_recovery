@@ -45,19 +45,6 @@
 			</object>
 			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row1_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_install" />
-				<actions>
-					<action function="queueclear"></action>
-					<action function="page">install</action>
-				</actions>
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row1_y%" />
 				<font resource="title" color="%text_button%" />
@@ -68,23 +55,7 @@
 				</actions>
 			</object>
 
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row2_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row2_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_wipe" />
-				<action function="page">wipe</action>
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row2_y%" />
 				<font resource="title" color="%text_button%" />
@@ -92,28 +63,8 @@
 				<action function="page">wipe</action>
 			</object>
 
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row3_y%" placement="4" />
-			</object>
-			
 			<object type="button">
 				<condition var1="auto_generate" var2="0" />
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row3_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_backup" />
-				<actions>
-					<action function="set">tw_backup_name=(Auto Generate)</action>
-					<action function="page">backup</action>
-				</actions>
-			</object>
-
-			<object type="button">
-				<condition var1="auto_generate" var2="0" />
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row3_y%" />
 				<font resource="title" color="%text_button%" />
@@ -126,20 +77,6 @@
 			
 			<object type="button">
 				<condition var1="auto_generate" var2="1" />
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row3_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_backup" />
-				<actions>
-					<action function="generatebackupname"></action>
-					<action function="page">backup</action>
-				</actions>
-			</object>
-
-			<object type="button">
-				<condition var1="auto_generate" var2="1" />
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row3_y%" />
 				<font resource="title" color="%text_button%" />
@@ -150,23 +87,7 @@
 				</actions>
 			</object>
 
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row4_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row4_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_restore" />
-				<action function="page">restore</action>
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row4_y%" />
 				<font resource="title" color="%text_button%" />
@@ -174,56 +95,15 @@
 				<action function="page">restore</action>
 			</object>
 
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_mount" />
-				<action function="page">mount</action>
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row5_y%" />
 				<font resource="title" color="%text_button%" />
 				<image resource="mb_mount_color" />
 				<action function="page">mount</action>
 			</object>
-
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row6_y%" placement="4" />
-			</object>
 			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="aromafm" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row6_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_filemanager" />
-				<actions>
-					<action function="queueclear"></action>
-					<action function="set">tw_screen_timeout_temp=%tw_screen_timeout_secs%</action>
-					<action function="set">tw_screen_timeout_secs=0</action>
-					<action function="set">tw_file=AROMA Filemanager</action>
-					<action function="set">tw_filename=/sdcard/TWRP/aromafm/aromafm.zip</action>
-					<action function="queuezip"></action>
-					<action function="page">flash_aromafm_confirm</action>
-				</actions>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="aromafm" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row6_y%" />
@@ -241,17 +121,6 @@
 			</object>
 			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="aromafm" op="!=" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row6_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_filemanager" />
-				<action function="page">filemanagerlist</action>
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="aromafm" op="!=" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row6_y%" />
@@ -260,47 +129,15 @@
 				<action function="page">filemanagerlist</action>
 			</object>
 
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row7_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row7_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_advanced" />
-				<action function="page">advanced</action>
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row7_y%" />
 				<font resource="title" color="%text_button%" />
 				<image resource="mb_advanced_color" />
 				<action function="page">advanced</action>
 			</object>
-
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row8_y%" placement="4" />
-			</object>
 			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row8_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_restart" />
-				<action function="page">reboot</action>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row8_y%" />
 				<font resource="title" color="%text_button%" />
@@ -947,16 +784,8 @@
 			</object>
 			
 			<object type="checkbox">
-				<placement x="%col1_x%" y="%row5_1_y%" />
-				<font resource="body2" color="%text%" />
-				<text>Use buttons on main menu</text>
-				<data variable="menu_btn_solid" />
-				<image checked="checkbox_true" unchecked="checkbox_false" />
-			</object>
-			
-			<object type="checkbox">
 				<condition var1="tw_no_cpu_temp" var2="0" />
-				<placement x="%col1_x%" y="%row5_2a_y%" />
+				<placement x="%col1_x%" y="%row5_1_y%" />
 				<font resource="body2" color="%text%" />
 				<text>Show CPU temperature</text>
 				<data variable="show_cpu_temp" />
@@ -4399,28 +4228,6 @@
 			</object>
 			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_reboot_system" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row1_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_system" />
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=system</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to restart?</action>
-					<action function="set">tw_action_text1=Restarting...</action>
-					<action function="set">tw_complete_text1=Restarting...</action>
-					<action function="set">tw_slider_text=Swipe to Restart</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>			
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_reboot_system" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row1_y%" />
@@ -4440,35 +4247,7 @@
 				</actions>
 			</object>
 
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row2_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_reboot_recovery" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row2_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_recovery" />
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=recovery</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to restart?</action>
-					<action function="set">tw_action_text1=Restarting...</action>
-					<action function="set">tw_complete_text1=Restarting...</action>
-					<action function="set">tw_slider_text=Swipe to Restart</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_reboot_recovery" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row2_y%" />
@@ -4487,36 +4266,8 @@
 					<action function="page">rebootcheck</action>
 				</actions>
 			</object>
-
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row3_y%" placement="4" />
-			</object>
 			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_reboot_bootloader" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row3_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_bootloader" />
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=bootloader</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to restart?</action>
-					<action function="set">tw_action_text1=Restarting...</action>
-					<action function="set">tw_complete_text1=Restarting...</action>
-					<action function="set">tw_slider_text=Swipe to Restart</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_reboot_bootloader" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row3_y%" />
@@ -4537,28 +4288,6 @@
 			</object>
 			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_download_mode" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row3_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_download" />
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=download</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to restart?</action>
-					<action function="set">tw_action_text1=Restarting...</action>
-					<action function="set">tw_complete_text1=Restarting...</action>
-					<action function="set">tw_slider_text=Swipe to Restart</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_download_mode" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row3_y%" />
@@ -4578,23 +4307,7 @@
 				</actions>
 			</object>
 			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row4_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row4_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="mb_theme" />
-				<action function="reload"></action>
-			</object>	
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row4_y%" />
 				<font resource="body1" color="%text_button%" />
@@ -4602,35 +4315,7 @@
 				<action function="reload"></action>
 			</object>
 			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_reboot_poweroff" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_poweroff" />
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=poweroff</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
-					<action function="set">tw_action_text1=Turning Off...</action>
-					<action function="set">tw_complete_text1=Turning Off...</action>
-					<action function="set">tw_slider_text=Swipe to Power Off</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_reboot_poweroff" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row5_y%" />
@@ -8936,25 +8621,6 @@
 			</object>
 			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row1_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_logtosd" />
-				<actions>
-					<action function="set">tw_back=advanced</action>
-					<action function="set">tw_action=copylog</action>
-					<action function="set">tw_text1=Copy Log to SD Card?</action>
-					<action function="set">tw_action_text1=Copy Log</action>
-					<action function="set">tw_action_text2=Copying Log to SD Card...</action>
-					<action function="set">tw_complete_text1=Copy Log complete</action>
-					<action function="set">tw_slider_text=Swipe to Confirm</action>
-					<action function="page">confirm_action</action>
-				</actions>
-			</object>			
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row1_y%" />
 				<font resource="title" color="%text_button%" />
@@ -8971,47 +8637,15 @@
 				</actions>
 			</object>
 
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row2_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row2_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_fixpermissions" />
-				<action function="page">fixpermissions</action>
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row2_y%" />
 				<font resource="title" color="%text_button%" />
 				<image resource="mb_fixpermissions_color" />
 				<action function="page">fixpermissions</action>
 			</object>
-
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row3_y%" placement="4" />
-			</object>
 			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row3_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_terminalcommand" />
-				<action function="page">terminalfolder</action>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row3_y%" />
 				<font resource="title" color="%text_button%" />
@@ -9019,23 +8653,7 @@
 				<action function="page">terminalfolder</action>
 			</object>
 			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row4_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row4_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_adbsideload" />
-				<action function="page">sideload</action>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row4_y%" />
 				<font resource="title" color="%text_button%" />
@@ -9043,41 +8661,7 @@
 				<action function="page">sideload</action>
 			</object>
 			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_show_dumlock" var2="1" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
-			</object>
-			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_show_dumlock" var2="0" />
-				<condition var1="tw_has_injecttwrp" var2="1" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
-			</object>
-			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_show_dumlock" var2="0" />
-				<condition var1="tw_allow_partition_sdcard" var2="1" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_show_dumlock" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="mb_dumlock" />
-				<action function="page">htcdumlock</action>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_show_dumlock" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row5_y%" />
@@ -9086,41 +8670,7 @@
 				<action function="page">htcdumlock</action>
 			</object>
 			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_has_injecttwrp" var2="1" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row6_y%" placement="4" />
-			</object>
-			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_has_injecttwrp" var2="0" />
-				<condition var1="tw_allow_partition_sdcard" var2="1" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row6_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_has_injecttwrp" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row6_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_reinjecttwrp" />
-				<actions>
-					<action function="set">tw_back=advanced</action>
-					<action function="set">tw_action=reinjecttwrp</action>
-					<action function="set">tw_text1=Re-Inject TWRP?</action>
-					<action function="set">tw_action_text1=Re-Injecting TWRP...</action>
-					<action function="set">tw_complete_text1=TWRP Injection complete</action>
-					<action function="set">tw_slider_text=Swipe to Confirm</action>
-					<action function="page">confirm_action</action>
-				</actions>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_has_injecttwrp" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row6_y%" />
@@ -9137,34 +8687,7 @@
 				</actions>
 			</object>
 			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_has_injecttwrp" var2="0" />
-				<condition var1="tw_allow_partition_sdcard" var2="1" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row7_y%" placement="4" />
-			</object>
-			
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_has_injecttwrp" var2="1" />
-				<condition var1="tw_allow_partition_sdcard" var2="1" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row7_y%" placement="4" />
-			</object>
-			
 			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<condition var1="tw_allow_partition_sdcard" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row7_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="mb_partsdcard" />
-				<action function="page">partsdcard</action>
-			</object>
-			
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_allow_partition_sdcard" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row7_y%" />
@@ -10891,7 +10414,6 @@
 					<action function="set">list_font=big</action>
 					<action function="set">bookmark=0</action>
 					<action function="set">navbar_sams=0</action>
-					<action function="set">menu_btn_solid=0</action>
 					<action function="set">location_install=/sdcard/Download</action>
 					<action function="set">location_install_image=/sdcard/Download</action>
 					<action function="set">location_addfile=/sdcard/Download</action>
@@ -10961,7 +10483,6 @@
 					<action function="set">list_font=big</action>
 					<action function="set">bookmark=0</action>
 					<action function="set">navbar_sams=0</action>
-					<action function="set">menu_btn_solid=0</action>
 					<action function="set">location_install=/sdcard/Download</action>
 					<action function="set">location_install_image=/sdcard/Download</action>
 					<action function="set">location_addfile=/sdcard/Download</action>

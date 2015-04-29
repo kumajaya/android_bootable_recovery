@@ -119,7 +119,6 @@
 		
 		<resource name="background" type="image" filename="background" />
 		<resource name="divider" type="image" filename="divider" />
-		<resource name="divider_list" type="image" filename="divider_list" />
 		<resource name="divider_wide" type="image" filename="divider_wide" />
 		<resource name="hider" type="image" filename="hider" />
 		<resource name="hider_ab_ex" type="image" filename="hider_ab_ex" />
@@ -180,27 +179,6 @@
 		
 		<resource name="mb_empty" type="image" filename="mb_empty" />
 		<resource name="mb_empty_s" type="image" filename="mb_empty_s" />
-		<resource name="mb_install" type="image" filename="mb_install" />
-		<resource name="mb_wipe" type="image" filename="mb_wipe" />
-		<resource name="mb_backup" type="image" filename="mb_backup" />
-		<resource name="mb_restore" type="image" filename="mb_restore" />
-		<resource name="mb_mount" type="image" filename="mb_mount" />
-		<resource name="mb_filemanager" type="image" filename="mb_filemanager" />
-		<resource name="mb_advanced" type="image" filename="mb_advanced" />
-		<resource name="mb_restart" type="image" filename="mb_restart" />
-		<resource name="mb_system" type="image" filename="mb_system" />
-		<resource name="mb_recovery" type="image" filename="mb_recovery" />
-		<resource name="mb_bootloader" type="image" filename="mb_bootloader" />
-		<resource name="mb_theme" type="image" filename="mb_theme" />
-		<resource name="mb_poweroff" type="image" filename="mb_poweroff" />
-		<resource name="mb_download" type="image" filename="mb_download" />
-		<resource name="mb_logtosd" type="image" filename="mb_logtosd" />
-		<resource name="mb_fixpermissions" type="image" filename="mb_fixpermissions" />
-		<resource name="mb_terminalcommand" type="image" filename="mb_terminalcommand" />
-		<resource name="mb_adbsideload" type="image" filename="mb_adbsideload" />
-		<resource name="mb_dumlock" type="image" filename="mb_dumlock" />
-		<resource name="mb_reinjecttwrp" type="image" filename="mb_reinjecttwrp" />
-		<resource name="mb_partsdcard" type="image" filename="mb_partsdcard" />
 		
 		<resource name="mb_install_color" type="image" filename="mb_install_color" />
 		<resource name="mb_wipe_color" type="image" filename="mb_wipe_color" />
@@ -302,7 +280,6 @@
 		<variable name="list_font" value="small" persist="1" />
 		<variable name="bookmark" value="0" persist="1" />
 		<variable name="navbar_sams" value="0" persist="1" />
-		<variable name="menu_btn_solid" value="0" persist="1" />
 		<variable name="hl_color" value="Light Blue" persist="1" />
 		<variable name="location_install" value="/sdcard/Download" persist="1" />
 		<variable name="location_install_image" value="/sdcard/Download" persist="1" />
