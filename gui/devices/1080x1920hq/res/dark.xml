@@ -2189,7 +2189,7 @@
 			</object>
 			
 			<object type="button">
-				<condition var1="tw_zip_queue_count" op=">" var2="1" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="1" />
 				<highlight color="%highlight_color%" />
 				<placement x="%btn_raised_left_x%" y="%row6_3_y%" />
 				<font resource="menu" color="%text_button%" />
@@ -2300,126 +2300,126 @@
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="1" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="1" />
 				<font resource="body2" />
 				<placement x="%col1_x%" y="%row3_1a_y%" />
 				<text>2</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="1" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="1" />
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row3_1a_y%" />
 				<text>%tw_q_2%</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="2" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="2" />
 				<font resource="body2" />
 				<placement x="%col1_x%" y="%row3_3_y%" />
 				<text>3</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="2" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="2" />
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row3_3_y%" />
 				<text>%tw_q_3%</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="3" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="3" />
 				<font resource="body2" />
 				<placement x="%col1_x%" y="%row4_1a_y%" />
 				<text>4</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="3" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="3" />
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row4_1a_y%" />
 				<text>%tw_q_4%</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="4" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="4" />
 				<font resource="body2" />
 				<placement x="%col1_x%" y="%row4_3_y%" />
 				<text>5</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="4" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="4" />
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row4_3_y%" />
 				<text>%tw_q_5%</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="5" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="5" />
 				<font resource="body2" />
 				<placement x="%col1_x%" y="%row5_1a_y%" />
 				<text>6</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="5" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="5" />
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row5_1a_y%" />
 				<text>%tw_q_6%</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="6" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="6" />
 				<font resource="body2" />
 				<placement x="%col1_x%" y="%row5_3_y%" />
 				<text>7</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="6" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="6" />
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row5_3_y%" />
 				<text>%tw_q_7%</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="7" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="7" />
 				<font resource="body2" />
 				<placement x="%col1_x%" y="%row6_1a_y%" />
 				<text>8</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="7" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="7" />
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row6_1a_y%" />
 				<text>%tw_q_8%</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="8" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="8" />
 				<font resource="body2" />
 				<placement x="%col1_x%" y="%row6_3_y%" />
 				<text>9</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="8" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="8" />
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row6_3_y%" />
 				<text>%tw_q_9%</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="9" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="9" />
 				<font resource="body2" />
 				<placement x="%col1_x%" y="%row7_1a_y%" />
 				<text>10</text>
 			</object>
 
 			<object type="text" color="%text%">
-				<condition var1="tw_zip_queue_count" op=">" var2="9" />
+				<condition var1="tw_zip_queue_count" op="&gt;" var2="9" />
 				<font resource="body2" />
 				<placement x="%col1_x_indent%" y="%row7_1a_y%" />
 				<text>%tw_q_10%</text>
@@ -3029,9 +3029,9 @@
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=wipe</action>
 					<action function="set">tw_action2_param=dalvik</action>
-					<action function="set">tw_text1=Wipe Cache & Dalvik?</action>
-					<action function="set">tw_action_text1=Wiping Cache & Dalvik...</action>
-					<action function="set">tw_complete_text1=Cache & Dalvik Wipe complete</action>
+					<action function="set">tw_text1=Wipe Cache &amp; Dalvik?</action>
+					<action function="set">tw_action_text1=Wiping Cache &amp; Dalvik...</action>
+					<action function="set">tw_complete_text1=Cache &amp; Dalvik Wipe complete</action>
 					<action function="set">tw_slider_text=Swipe to Wipe</action>
 					<action function="page">confirm_action</action>
 				</actions>
@@ -3755,12 +3755,12 @@
 		
 		<page name="rebootcheck">
 			<object type="action">
-				<condition var1="tw_backup_system_size" op=">=" var2="%tw_min_system%" />
+				<condition var1="tw_backup_system_size" op="&gt;=" var2="%tw_min_system%" />
 				<action function="reboot">%tw_action_param%</action>
 			</object>
 
 			<object type="action">
-				<condition var1="tw_backup_system_size" op="<" var2="%tw_min_system%" />
+				<condition var1="tw_backup_system_size" op="&lt;" var2="%tw_min_system%" />
 				<action function="page">confirm_action</action>
 			</object>
 		</page>
@@ -5728,7 +5728,7 @@
 				<actions>
 					<action function="set">tw_back=restore_decrypt</action>
 					<action function="set">tw_action=cmd</action>
-					<action function="set">tw_action_param=cd %tw_backups_folder% && rm -rf &quot;%tw_restore_name%&quot;</action>
+					<action function="set">tw_action_param=cd %tw_backups_folder% &amp;&amp; rm -rf &quot;%tw_restore_name%&quot;</action>
 					<action function="set">tw_text1=Delete Backup?</action>
 					<action function="set">tw_text2=%tw_restore_name%</action>
 					<action function="set">tw_text4=This cannot be undone!</action>
@@ -5921,7 +5921,7 @@
 				<actions>
 					<action function="set">tw_back=restore_select</action>
 					<action function="set">tw_action=cmd</action>
-					<action function="set">tw_action_param=cd %tw_backups_folder% && rm -rf &quot;%tw_restore_name%&quot;</action>
+					<action function="set">tw_action_param=cd %tw_backups_folder% &amp;&amp; rm -rf &quot;%tw_restore_name%&quot;</action>
 					<action function="set">tw_text1=Delete Backup?</action>
 					<action function="set">tw_text2=%tw_restore_name%</action>
 					<action function="set">tw_text4=This cannot be undone!</action>
@@ -6059,7 +6059,7 @@
 				<actions>
 					<action function="set">tw_back=restore</action>
 					<action function="set">tw_action=cmd</action>
-					<action function="set">tw_action_param=cd %tw_backups_folder% && mv &quot;%tw_restore_name%&quot; &quot;%tw_backup_rename%&quot;</action>
+					<action function="set">tw_action_param=cd %tw_backups_folder% &amp;&amp; mv &quot;%tw_restore_name%&quot; &quot;%tw_backup_rename%&quot;</action>
 					<action function="set">tw_text1=Rename Backup?</action>
 					<action function="set">tw_text2=This cannot be undone!</action>
 					<action function="set">tw_action_text1=Renaming Backup...</action>
@@ -7210,7 +7210,7 @@
 				<font resource="title" color="%text_button%" />
 				<image resource="bs_btn_copy" />
 				<actions>
-					<action function="set">tw_filemanager_command=cd &quot;%tw_file_location1%&quot; && cd .. && cp -R</action>
+					<action function="set">tw_filemanager_command=cd &quot;%tw_file_location1%&quot; &amp;&amp; cd .. &amp;&amp; cp -R</action>
 					<action function="set">tw_fm_text1=Copying</action>
 					<action function="page">choosedestinationfolder</action>
 				</actions>
@@ -7251,7 +7251,7 @@
 				<actions>
 					<action function="set">tw_filemanager_rename=tw_selection1</action>
 					<action function="set">tw_fm_text1=Renaming</action>
-					<action function="set">tw_filemanager_command=cd &quot;%tw_file_location1%&quot; && cd .. && mv</action>
+					<action function="set">tw_filemanager_command=cd &quot;%tw_file_location1%&quot; &amp;&amp; cd .. &amp;&amp; mv</action>
 					<action function="page">filemanagerrenamefolder</action>
 				</actions>
 			</object>

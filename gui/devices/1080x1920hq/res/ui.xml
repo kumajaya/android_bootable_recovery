@@ -613,8 +613,8 @@
 					<condition var1="center_clock" op="!=" var2="1" />
 					<condition var1="tw_military_time" var2="0" />
 					<condition var1="tw_no_battery_percent" var2="0" />
-					<condition var1="tw_battery" op=">" var2="16" />
-					<condition var1="tw_battery" op="<" var2="101" />
+					<condition var1="tw_battery" op="&gt;" var2="16" />
+					<condition var1="tw_battery" op="&lt;" var2="101" />
 				</conditions>
 				<text>%tw_battery%</text>
 			</object>
@@ -625,8 +625,8 @@
 				<conditions>
 					<condition var1="center_clock" op="!=" var2="1" />
 					<condition var1="tw_military_time" var2="0" />
-					<condition var1="tw_battery" op=">" var2="0" />
-					<condition var1="tw_battery" op="<" var2="15" />
+					<condition var1="tw_battery" op="&gt;" var2="0" />
+					<condition var1="tw_battery" op="&lt;" var2="15" />
 				</conditions>
 				<text>%tw_battery%</text>
 			</object>
@@ -638,8 +638,8 @@
 					<condition var1="center_clock" op="!=" var2="1" />
 					<condition var1="tw_military_time" var2="1" />
 					<condition var1="tw_no_battery_percent" var2="0" />
-					<condition var1="tw_battery" op=">" var2="16" />
-					<condition var1="tw_battery" op="<" var2="101" />
+					<condition var1="tw_battery" op="&gt;" var2="16" />
+					<condition var1="tw_battery" op="&lt;" var2="101" />
 				</conditions>
 				<text>%tw_battery%</text>
 			</object>
@@ -650,8 +650,8 @@
 				<conditions>
 					<condition var1="center_clock" op="!=" var2="1" />
 					<condition var1="tw_military_time" var2="1" />
-					<condition var1="tw_battery" op=">" var2="0" />
-					<condition var1="tw_battery" op="<" var2="15" />
+					<condition var1="tw_battery" op="&gt;" var2="0" />
+					<condition var1="tw_battery" op="&lt;" var2="15" />
 				</conditions>
 				<text>%tw_battery%</text>
 			</object>
@@ -662,8 +662,8 @@
 				<conditions>
 					<condition var1="center_clock" op="=" var2="1" />
 					<condition var1="tw_no_battery_percent" var2="0" />
-					<condition var1="tw_battery" op=">" var2="16" />
-					<condition var1="tw_battery" op="<" var2="101" />
+					<condition var1="tw_battery" op="&gt;" var2="16" />
+					<condition var1="tw_battery" op="&lt;" var2="101" />
 				</conditions>
 				<text>%tw_battery%</text>
 			</object>
@@ -673,8 +673,8 @@
 				<placement x="%time_x%" y="%status_info_y%" placement="1" />
 				<conditions>
 					<condition var1="center_clock" op="=" var2="1" />
-					<condition var1="tw_battery" op=">" var2="0" />
-					<condition var1="tw_battery" op="<" var2="15" />
+					<condition var1="tw_battery" op="&gt;" var2="0" />
+					<condition var1="tw_battery" op="&lt;" var2="15" />
 				</conditions>
 				<text>%tw_battery%</text>
 			</object>
@@ -808,7 +808,7 @@
 					<keysize height="161" width="108" />
 					<row1 key01="~" key02="`" key03="|" key04="108:" key05="108:" key06="108:" key07="%" key08="108:" key09="{" key10="}" />
 					<row2 key01="108:" key02="108:" key03="108:" key04="108:" key05="108:" key06="^" key07="_" key08="=" key09="[" key10="]" />
-					<row3 key01="162:layout3" key02="108:" key03="108:" key04="108:" key05="108:" key06="\" key07="<" key08=">" key09="162:c:8" />
+					<row3 key01="162:layout3" key02="108:" key03="108:" key04="108:" key05="108:" key06="\" key07="&lt;" key08="&gt;" key09="162:c:8" />
 					<row4 key01="162:layout1" key02="108:c:34" key03="540: " key04="." key05="162:action" />
 				</layout4>
 			</object>
