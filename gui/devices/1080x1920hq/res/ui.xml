@@ -418,11 +418,11 @@
 		<variable name="lightransparent" value="#00000033" />
 		<variable name="transparent" value="#00000000" />
 		<variable name="text" value="#E3E3E3FF" />
-		<variable name="text_actionbar" value="#1E333DFF" />
+		<variable name="text_actionbar" value="#292D2FFF" />
 		<variable name="text_button" value="#E3E3E3FF" />
 		<variable name="text_light" value="#E3E3E3FF" />
 		<variable name="text_dark" value="#A7A7ADFF" />
-		<variable name="text_highlight" value="#03A9F4FF" />
+		<variable name="text_highlight" value="#607D8BFF" />
 		<variable name="text_success" value="#68B60B" />
 		<variable name="text_fail" value="#FF0101" />
 		<variable name="highlight_color" value="#22222266"  />
