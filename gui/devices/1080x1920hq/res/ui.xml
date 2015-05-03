@@ -60,8 +60,6 @@
 		
 		<resource name="btn_float_addtoqueue" type="image" filename="btn_float_addtoqueue" />
 		<resource name="btn_float_addtoqueue_hl" type="image" filename="btn_float_addtoqueue_hl" />
-		<resource name="btn_float_flashifyinfo" type="image" filename="btn_float_flashifyinfo" />
-		<resource name="btn_float_flashifyinfo_hl" type="image" filename="btn_float_flashifyinfo_hl" />
 		<resource name="btn_float_accept" type="image" filename="btn_float_accept" />
 		<resource name="btn_float_folder" type="image" filename="btn_float_folder" />
 		
@@ -110,8 +108,6 @@
 		<resource name="btn_raised_usbstorage" type="image" filename="btn_raised_usbstorage" />
 		<resource name="btn_raised_cancel" type="image" filename="btn_raised_cancel" />
 		<resource name="btn_raised_noinstall" type="image" filename="btn_raised_noinstall" />
-		<resource name="btn_raised_changesplash" type="image" filename="btn_raised_changesplash" />
-		<resource name="btn_raised_mr_addfile" type="image" filename="btn_raised_mr_addfile" />
 		<resource name="btn_raised_wipeencryption" type="image" filename="btn_raised_wipeencryption" />
 		
 		<resource name="btn_appenddate" type="image" filename="btn_appenddate" />
@@ -131,7 +127,6 @@
 		<resource name="dialog_label_decryption" type="image" filename="dialog_label_decryption" />
 		<resource name="dialog_label_offset" type="image" filename="dialog_label_offset" />
 		<resource name="dialog_label_removetheme" type="image" filename="dialog_label_removetheme" />
-		<resource name="dialog_label_warning" type="image" filename="dialog_label_warning" />
 		
 		<resource name="menu_install" type="image" filename="menu_install" />
 		<resource name="menu_sort" type="image" filename="menu_sort" />
@@ -265,8 +260,6 @@
 		
 		<!--theme settings-->
 		<variable name="theme_version" value="286X_v1" />
-		<variable name="inject_theme" value="0" persist="1" />
-		<variable name="auto_flash_repack" value="0" persist="1" />
 		<variable name="aromafm" value="0" persist="1" />
 		<variable name="auto_generate" value="0" persist="1" />
 		<variable name="show_cpu_temp" value="0" persist="1" />
@@ -282,8 +275,6 @@
 		<variable name="location_install_image" value="/sdcard/Download" persist="1" />
 		<variable name="location_addfile" value="/sdcard/Download" persist="1" />
 		<variable name="location_themes" value="/sdcard/Download" persist="1" />
-		<variable name="location_install_splash_image" value="/sdcard/Download" persist="1" />
-		<variable name="location_install_splash_jpg" value="/sdcard/Download" persist="1" />
 		
 		<variable name="screen_w" value="1080" />
 		<variable name="screen_h" value="1920" />
