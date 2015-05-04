@@ -8522,19 +8522,6 @@
 			</object>
 			
 			<object type="button">
-				<condition var1="dialog_context" var2="loc_theme" />
-				<placement x="%db_right_x%" y="%db_y%" />
-				<font resource="menu" color="%text_button%" />
-				<image resource="db_ok" highlightresource="db_ok_hl" />
-				<actions>
-					<action function="set">location_themes=%tw_zip_location%</action>
-					<action function="set">tw_zip_location=%location_themes%</action>
-					<action function="set">dialog_context=none</action>
-					<action function="overlay"></action>
-				</actions>
-			</object>
-			
-			<object type="button">
 				<condition var1="dialog_context" var2="loc_image" />
 				<placement x="%db_right_x%" y="%db_y%" />
 				<font resource="menu" color="%text_button%" />
@@ -8712,7 +8699,6 @@
 					<action function="set">show_cpu_temp=0</action>
 					<action function="set">center_clock=0</action>
 					<action function="set">dialog_hide_folder=0</action>
-					<action function="set">dialog_hide_color=0</action>
 					<action function="set">dialog_context=none</action>
 					<action function="set">list_font=big</action>
 					<action function="set">bookmark=0</action>
@@ -8720,7 +8706,6 @@
 					<action function="set">location_install=/sdcard/Download</action>
 					<action function="set">location_install_image=/sdcard/Download</action>
 					<action function="set">location_addfile=/sdcard/Download</action>
-					<action function="set">location_themes=/sdcard/Download</action>
 					<action function="overlay"></action>
 				</actions>
 			</object>
@@ -8776,7 +8761,6 @@
 					<action function="set">show_cpu_temp=0</action>
 					<action function="set">center_clock=0</action>
 					<action function="set">dialog_hide_folder=0</action>
-					<action function="set">dialog_hide_color=0</action>
 					<action function="set">dialog_context=none</action>
 					<action function="set">list_font=big</action>
 					<action function="set">bookmark=0</action>
@@ -8784,7 +8768,6 @@
 					<action function="set">location_install=/sdcard/Download</action>
 					<action function="set">location_install_image=/sdcard/Download</action>
 					<action function="set">location_addfile=/sdcard/Download</action>
-					<action function="set">location_themes=/sdcard/Download</action>
 					<action function="overlay"></action>
 				</actions>
 			</object>
