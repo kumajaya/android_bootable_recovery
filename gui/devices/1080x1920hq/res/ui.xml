@@ -115,14 +115,12 @@
 		<resource name="background" type="image" filename="background" />
 		<resource name="divider" type="image" filename="divider" />
 		<resource name="divider_wide" type="image" filename="divider_wide" />
-		<resource name="hider" type="image" filename="hider" />
 		<resource name="hider_ab_ex" type="image" filename="hider_ab_ex" />
 		
 		<resource name="dialog_bg" type="image" filename="dialog_bg" />
 		<resource name="dialog_label_storage" type="image" filename="dialog_label_storage" />
 		<resource name="dialog_label_bookmark" type="image" filename="dialog_label_bookmark" />
 		<resource name="dialog_label_restoresettings" type="image" filename="dialog_label_restoresettings" />
-		<resource name="dialog_label_color" type="image" filename="dialog_label_color" />
 		<resource name="dialog_label_encryption" type="image" filename="dialog_label_encryption" />
 		<resource name="dialog_label_decryption" type="image" filename="dialog_label_decryption" />
 		<resource name="dialog_label_offset" type="image" filename="dialog_label_offset" />
@@ -265,12 +263,10 @@
 		<variable name="show_cpu_temp" value="0" persist="1" />
 		<variable name="center_clock" value="0" persist="1" />
 		<variable name="dialog_hide_folder" value="0" persist="1" />
-		<variable name="dialog_hide_color" value="0" persist="1" />
 		<variable name="dialog_context" value="none" persist="1" />
 		<variable name="list_font" value="small" persist="1" />
 		<variable name="bookmark" value="0" persist="1" />
 		<variable name="navbar_sams" value="0" persist="1" />
-		<variable name="hl_color" value="Light Blue" persist="1" />
 		<variable name="location_install" value="/sdcard/Download" persist="1" />
 		<variable name="location_install_image" value="/sdcard/Download" persist="1" />
 		<variable name="location_addfile" value="/sdcard/Download" persist="1" />
