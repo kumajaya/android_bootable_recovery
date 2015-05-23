@@ -27,7 +27,7 @@
 
 int main() {
 	printf("blah\n");
-	set_partition_data("/dev/block/mmcblk0p28", "/dev/block/mmcblk0p27", "ext4");
+	set_partition_data("/dev/block/platform/msm_sdcc.1/by-name/userdata", "/dev/block/platform/msm_sdcc.1/by-name/reserve4", "ext4");
 	printf("blah2\n");
 	int ret = cryptfs_check_passwd("30303030");
 	//int ret = cryptfs_check_passwd("0000");
