@@ -25,8 +25,8 @@
 #include "crypto_scrypt.h"
 
 int main() {
-	set_partition_data("/dev/block/platform/sdhci-tegra.3/by-name/UDA", "/dev/block/platform/sdhci-tegra.3/by-name/MD1", "f2fs");
-	//int ret = cryptfs_check_passwd("30303030");
-	int ret = cryptfs_check_passwd("0000");
+	set_partition_data("/dev/block/platform/msm_sdcc.1/by-name/userdata", "/dev/block/platform/msm_sdcc.1/by-name/reserve4", "ext4");
+	int ret = cryptfs_check_passwd("30303030");
+	//int ret = cryptfs_check_passwd("0000");
 	return 0;
 }
