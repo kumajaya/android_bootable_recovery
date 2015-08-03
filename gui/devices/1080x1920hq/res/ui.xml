@@ -15,7 +15,7 @@
 		<resource name="subhead" type="font" filename="RobotoRegular.ttf" size="52" fallback="Roboto-Regular-52"/>
 		<resource name="menu" type="font" filename="RobotoMedium.ttf" size="42" fallback="Roboto-Medium-42"/>
 		<resource name="title" type="font" filename="RobotoMedium.ttf" size="60" fallback="Roboto-Medium-60"/>
-		<resource name="fixed" type="font" filename="DroidSansMono.ttf" size="32" fallback="Roboto-Medium-36"/>
+		<resource name="fixed" type="font" filename="DroidSansMono.ttf" size="36" fallback="Roboto-Medium-36"/>
 		<resource name="statusbar" type="image" filename="statusbar"/>
 		<resource name="actionbar" type="image" filename="actionbar"/>
 		<resource name="actionbar_tab" type="image" filename="actionbar_tab"/>
@@ -91,6 +91,8 @@
 		<resource name="btn_raised_fsoptions" type="image" filename="btn_raised_fsoptions"/>
 		<resource name="btn_raised_fsrepair" type="image" filename="btn_raised_fsrepair"/>
 		<resource name="btn_raised_fschange" type="image" filename="btn_raised_fschange"/>
+		<resource name="btn_raised_fsresize" type="image" filename="btn_raised_fsresize"/>
+		<resource name="btn_raised_keepreadonly" type="image" filename="btn_raised_keepreadonly"/>
 		<resource name="btn_raised_disconnect" type="image" filename="btn_raised_disconnect"/>
 		<resource name="btn_raised_advancedwipe" type="image" filename="btn_raised_advancedwipe"/>
 		<resource name="btn_raised_back" type="image" filename="btn_raised_back"/>
@@ -228,7 +230,7 @@
 	</resources>
 	<variables>
 		<!--theme settings-->
-		<variable name="theme_version" value="286X_v1"/>
+		<variable name="theme_version" value="287X_v1"/>
 		<variable name="aromafm" value="0" persist="1"/>
 		<variable name="auto_generate" value="0" persist="1"/>
 		<variable name="show_cpu_temp" value="0" persist="1"/>
@@ -415,9 +417,9 @@
 		<variable name="db_checkbox_y" value="1012"/>
 		<variable name="fileselector_width" value="1032"/>
 		<variable name="fileselector_install_height" value="1175"/>
-		<variable name="fileselector_part_height" value="630"/>
+		<variable name="fileselector_part_height" value="540"/>
 		<variable name="fileselector_wipe_height" value="450"/>
-		<variable name="fileselector_mount_height" value="620"/>
+		<variable name="fileselector_mount_height" value="540"/>
 		<variable name="fileselector_terminal_height" value="1319"/>
 		<variable name="fileselector_separatorheight" value="2"/>
 		<variable name="fileselector_spacing" value="0"/>

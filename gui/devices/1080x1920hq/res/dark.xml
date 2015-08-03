@@ -1610,13 +1610,6 @@
 				<text>Run</text>
 			</object>
 			<object type="text" color="%text_actionbar%">
-				<condition var1="tw_file" op="!=" var2="AROMA Filemanager"/>
-				<font resource="body1"/>
-				<placement x="%col1_x_indent%" y="%row1_2_y%"/>
-				<text>%tw_filename%</text>
-			</object>
-			<object type="text" color="%text_actionbar%">
-				<condition var1="tw_file" var2="AROMA Filemanager"/>
 				<font resource="body1"/>
 				<placement x="%col1_x_indent%" y="%row1_2_y%"/>
 				<text>%tw_file%</text>
@@ -2240,7 +2233,10 @@
 				</actions>
 			</object>
 			<object type="button">
-				<condition var1="tw_reboot_bootloader" var2="1"/>
+				<conditions>
+					<condition var1="tw_reboot_bootloader" var2="1"/>
+					<condition var1="tw_download_mode" op="!=" var2="1"/>
+				</conditions>
 				<highlight color="%highlight_color%"/>
 				<placement x="%col1_x%" y="%mb_row3_y%"/>
 				<font resource="title" color="%text_button%"/>
@@ -2259,7 +2255,10 @@
 				</actions>
 			</object>
 			<object type="button">
-				<condition var1="tw_download_mode" var2="1"/>
+				<conditions>
+					<condition var1="tw_reboot_bootloader" op="!=" var2="1"/>
+					<condition var1="tw_download_mode" var2="1"/>
+				</conditions>
 				<highlight color="%highlight_color%"/>
 				<placement x="%col1_x%" y="%mb_row3_y%"/>
 				<font resource="title" color="%text_button%"/>
@@ -2278,6 +2277,51 @@
 				</actions>
 			</object>
 			<object type="button">
+				<conditions>
+					<condition var1="tw_reboot_bootloader" var2="1"/>
+					<condition var1="tw_download_mode" var2="1"/>
+				</conditions>
+				<highlight color="%highlight_color%"/>
+				<placement x="%col1_x%" y="%mb_row3_y%"/>
+				<font resource="title" color="%text_button%"/>
+				<image resource="mb_bootloader_color"/>
+				<actions>
+					<action function="set">tw_back=reboot</action>
+					<action function="set">tw_action=reboot</action>
+					<action function="set">tw_action_param=download</action>
+					<action function="set">tw_has_action2=0</action>
+					<action function="set">tw_text1=No OS Installed!</action>
+					<action function="set">tw_text2=Are you sure you wish to restart?</action>
+					<action function="set">tw_action_text1=Restarting...</action>
+					<action function="set">tw_complete_text1=Restarting...</action>
+					<action function="set">tw_slider_text=Swipe to Restart</action>
+					<action function="page">rebootcheck</action>
+				</actions>
+			</object>
+			<object type="button">
+				<conditions>
+					<condition var1="tw_reboot_bootloader" var2="1"/>
+					<condition var1="tw_download_mode" var2="1"/>
+				</conditions>
+				<highlight color="%highlight_color%"/>
+				<placement x="%col1_x%" y="%mb_row4_y%"/>
+				<font resource="title" color="%text_button%"/>
+				<image resource="mb_download_color"/>
+				<actions>
+					<action function="set">tw_back=reboot</action>
+					<action function="set">tw_action=reboot</action>
+					<action function="set">tw_action_param=download</action>
+					<action function="set">tw_has_action2=0</action>
+					<action function="set">tw_text1=No OS Installed!</action>
+					<action function="set">tw_text2=Are you sure you wish to restart?</action>
+					<action function="set">tw_action_text1=Restarting...</action>
+					<action function="set">tw_complete_text1=Restarting...</action>
+					<action function="set">tw_slider_text=Swipe to Restart</action>
+					<action function="page">rebootcheck</action>
+				</actions>
+			</object>
+			<object type="button">
+				<condition var1="tw_download_mode" op="!=" var2="1"/>
 				<highlight color="%highlight_color%"/>
 				<placement x="%col1_x%" y="%mb_row4_y%"/>
 				<font resource="body1" color="%text_button%"/>
@@ -2285,9 +2329,76 @@
 				<action function="reload"/>
 			</object>
 			<object type="button">
-				<condition var1="tw_reboot_poweroff" var2="1"/>
+				<condition var1="tw_reboot_bootloader" op="!=" var2="1"/>
+				<highlight color="%highlight_color%"/>
+				<placement x="%col1_x%" y="%mb_row4_y%"/>
+				<font resource="body1" color="%text_button%"/>
+				<image resource="mb_theme_color"/>
+				<action function="reload"></action>
+			</object>
+			<object type="button">
+				<conditions>
+					<condition var1="tw_reboot_bootloader" var2="1"/>
+					<condition var1="tw_download_mode" var2="1"/>
+				</conditions>
 				<highlight color="%highlight_color%"/>
 				<placement x="%col1_x%" y="%mb_row5_y%"/>
+				<font resource="body1" color="%text_button%"/>
+				<image resource="mb_theme_color"/>
+				<action function="reload"></action>
+			</object>
+			<object type="button">
+				<conditions>
+					<condition var1="tw_reboot_poweroff" var2="1"/>
+					<condition var1="tw_download_mode" op="!=" var2="1"/>
+				</conditions>
+				<highlight color="%highlight_color%"/>
+				<placement x="%col1_x%" y="%mb_row5_y%"/>
+				<font resource="title" color="%text_button%"/>
+				<image resource="mb_poweroff_color"/>
+				<actions>
+					<action function="set">tw_back=reboot</action>
+					<action function="set">tw_action=reboot</action>
+					<action function="set">tw_action_param=poweroff</action>
+					<action function="set">tw_has_action2=0</action>
+					<action function="set">tw_text1=No OS Installed!</action>
+					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
+					<action function="set">tw_action_text1=Turning Off...</action>
+					<action function="set">tw_complete_text1=Turning Off...</action>
+					<action function="set">tw_slider_text=Swipe to Power Off</action>
+					<action function="page">rebootcheck</action>
+				</actions>
+			</object>
+			<object type="button">
+				<conditions>
+					<condition var1="tw_reboot_poweroff" var2="1"/>
+					<condition var1="tw_reboot_bootloader" op="!=" var2="1"/>
+				</conditions>
+				<highlight color="%highlight_color%"/>
+				<placement x="%col1_x%" y="%mb_row5_y%"/>
+				<font resource="title" color="%text_button%"/>
+				<image resource="mb_poweroff_color"/>
+				<actions>
+					<action function="set">tw_back=reboot</action>
+					<action function="set">tw_action=reboot</action>
+					<action function="set">tw_action_param=poweroff</action>
+					<action function="set">tw_has_action2=0</action>
+					<action function="set">tw_text1=No OS Installed!</action>
+					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
+					<action function="set">tw_action_text1=Turning Off...</action>
+					<action function="set">tw_complete_text1=Turning Off...</action>
+					<action function="set">tw_slider_text=Swipe to Power Off</action>
+					<action function="page">rebootcheck</action>
+				</actions>
+			</object>
+			<object type="button">
+				<conditions>
+					<condition var1="tw_reboot_poweroff" var2="1"/>
+					<condition var1="tw_reboot_bootloader" var2="1"/>
+					<condition var1="tw_download_mode" var2="1"/>
+				</conditions>
+				<highlight color="%highlight_color%"/>
+				<placement x="%col1_x%" y="%mb_row6_y%"/>
 				<font resource="title" color="%text_button%"/>
 				<image resource="mb_poweroff_color"/>
 				<actions>
@@ -2749,109 +2860,129 @@
 				<placement x="%col1_x_indent%" y="%row1_2_y%"/>
 				<text>File System Options</text>
 			</object>
-			<object type="text" color="%text_dark%">
+			<!--object type="text" color="%text_dark%">
 				<font resource="caption"/>
 				<placement x="%col1_x%" y="%row2_2_y%"/>
 				<text>Selected Partition</text>
-			</object>
+			</object-->
 			<object type="text" color="%text_highlight%">
 				<font resource="title"/>
-				<placement x="%col1_x%" y="%row2_3_y%"/>
+				<placement x="%col1_x%" y="%row2_2_y%"/>
 				<text>%tw_partition_name%</text>
 			</object>
 			<object type="text" color="%text_dark%">
 				<font resource="caption"/>
-				<placement x="%col1_x%" y="%row3_2_y%"/>
+				<placement x="%col1_x%" y="%row3_1_y%"/>
 				<text>Mount Point</text>
 			</object>
 			<object type="text" color="%text%">
 				<font resource="body2"/>
-				<placement x="%col1_x%" y="%row3_3_y%"/>
+				<placement x="%col1_x%" y="%row3_2_y%"/>
 				<text>%tw_partition_mount_point%</text>
 			</object>
 			<object type="text" color="%text_dark%">
 				<font resource="caption"/>
-				<placement x="%col2_x%" y="%row3_2_y%"/>
+				<placement x="%col2_x%" y="%row3_1_y%"/>
 				<text>Current File System</text>
 			</object>
 			<object type="text" color="%text%">
 				<font resource="body2"/>
-				<placement x="%col2_x%" y="%row3_3_y%"/>
+				<placement x="%col2_x%" y="%row3_2_y%"/>
 				<text>%tw_partition_file_system%</text>
 			</object>
 			<object type="text" color="%text_dark%">
 				<font resource="caption"/>
-				<placement x="%col1_x%" y="%row4_2_y%"/>
+				<placement x="%col1_x%" y="%row4_1_y%"/>
 				<text>Present</text>
 			</object>
 			<object type="text" color="%text%">
 				<condition var1="tw_partition_is_present" op="!=" var2="0"/>
 				<font resource="body2"/>
-				<placement x="%col1_x%" y="%row4_3_y%"/>
+				<placement x="%col1_x%" y="%row4_2_y%"/>
 				<text>Yes</text>
 			</object>
 			<object type="text" color="%text%">
 				<condition var1="tw_partition_is_present" op="=" var2="0"/>
 				<font resource="body2"/>
-				<placement x="%col1_x%" y="%row4_3_y%"/>
+				<placement x="%col1_x%" y="%row4_2_y%"/>
 				<text>No</text>
 			</object>
 			<object type="text" color="%text_dark%">
 				<font resource="caption"/>
-				<placement x="%col2_x%" y="%row4_2_y%"/>
+				<placement x="%col2_x%" y="%row4_1_y%"/>
 				<text>Removable</text>
 			</object>
 			<object type="text" color="%text%">
 				<condition var1="tw_partition_removable" op="!=" var2="0"/>
 				<font resource="body2"/>
-				<placement x="%col2_x%" y="%row4_3_y%"/>
+				<placement x="%col2_x%" y="%row4_2_y%"/>
 				<text>Yes</text>
 			</object>
 			<object type="text" color="%text%">
 				<condition var1="tw_partition_removable" op="=" var2="0"/>
 				<font resource="body2"/>
-				<placement x="%col2_x%" y="%row4_3_y%"/>
+				<placement x="%col2_x%" y="%row4_2_y%"/>
 				<text>No</text>
 			</object>
 			<object type="text" color="%text_dark%">
 				<font resource="caption"/>
-				<placement x="%col1_x%" y="%row5_2_y%"/>
+				<placement x="%col1_x%" y="%row5_1_y%"/>
 				<text>Size</text>
 			</object>
 			<object type="text" color="%text%">
 				<font resource="body2"/>
-				<placement x="%col1_x%" y="%row5_3_y%"/>
+				<placement x="%col1_x%" y="%row5_2_y%"/>
 				<text>%tw_partition_size%MB</text>
 			</object>
 			<object type="text" color="%text_dark%">
 				<font resource="caption"/>
-				<placement x="%col2_x%" y="%row5_2_y%"/>
+				<placement x="%col2_x%" y="%row5_1_y%"/>
 				<text>Backup Size</text>
 			</object>
 			<object type="text" color="%text%">
 				<font resource="body2"/>
-				<placement x="%col2_x%" y="%row5_3_y%"/>
+				<placement x="%col2_x%" y="%row5_2_y%"/>
 				<text>%tw_partition_backup_size%MB</text>
 			</object>
 			<object type="text" color="%text_dark%">
 				<font resource="caption"/>
-				<placement x="%col1_x%" y="%row6_2_y%"/>
+				<placement x="%col1_x%" y="%row6_1_y%"/>
 				<text>Used</text>
 			</object>
 			<object type="text" color="%text%">
 				<font resource="body2"/>
-				<placement x="%col1_x%" y="%row6_3_y%"/>
+				<placement x="%col1_x%" y="%row6_2_y%"/>
 				<text>%tw_partition_used%MB</text>
 			</object>
 			<object type="text" color="%text_dark%">
 				<font resource="caption"/>
-				<placement x="%col2_x%" y="%row6_2_y%"/>
+				<placement x="%col2_x%" y="%row6_1_y%"/>
 				<text>Free</text>
 			</object>
 			<object type="text" color="%text%">
 				<font resource="body2"/>
-				<placement x="%col2_x%" y="%row6_3_y%"/>
+				<placement x="%col2_x%" y="%row6_2_y%"/>
 				<text>%tw_partition_free%MB</text>
+			</object>
+			<object type="button">
+				<condition var1="tw_partition_can_resize" op="=" var2="1"/>
+				<highlight color="%highlight_color%"/>
+				<placement x="%btn_raised_left_x%" y="%row7_1_y%"/>
+				<font resource="menu" color="%text_button%"/>
+				<image resource="btn_raised_fsresize"/>
+				<actions>
+					<action function="set">tw_back=partitionoptions</action>
+					<action function="set">tw_action=resize</action>
+					<action function="set">tw_action_param=%tw_partition_mount_point%</action>
+					<action function="set">tw_has_action2=1</action>
+					<action function="set">tw_action2=getpartitiondetails</action>
+					<action function="set">tw_text1=Resize %tw_partition_name%?</action>
+					<action function="set">tw_text2=</action>
+					<action function="set">tw_action_text1=Resizing...</action>
+					<action function="set">tw_complete_text1=Resize Complete</action>
+					<action function="set">tw_slider_text=Swipe to Resize</action>
+					<action function="page">wipe_confirm_action</action>
+				</actions>
 			</object>
 			<object type="button">
 				<condition var1="tw_partition_can_repair" op="=" var2="1"/>
@@ -4735,6 +4866,30 @@
 				<font resource="body2" spacing="%fileselector_spacing%" color="%text%" highlightcolor="%highlight%"/>
 				<listtype name="mount"/>
 			</object>
+			<object type="text" color="%text_dark%">
+				<font resource="caption"/>
+				<placement x="%col1_x%" y="%row7_1_y%"/>
+				<text>Options</text>
+			</object>
+			<object type="button">
+				<condition var1="tw_mount_system_ro" op="=" var2="0"/>
+				<placement x="%col1_x%" y="%row7_2_y%"/>
+				<font resource="body2" color="%text%"/>
+				<text>Only mount system read-only</text>
+				<image resource="checkbox_false"/>
+				<action function="mountsystemtoggle">1</action>
+			</object>
+			<object type="button">
+				<condition var1="tw_mount_system_ro" op="!=" var2="0"/>
+				<placement x="%col1_x%" y="%row7_2_y%"/>
+				<font resource="body2" color="%text%"/>
+				<text>Only mount system read-only</text>
+				<image resource="checkbox_true"/>
+				<actions>
+					<action function="set">tw_lifetime_writes=2</action>
+					<action function="page">system_readonly_check</action>
+				</actions>
+			</object>
 			<object type="button">
 				<condition var1="tw_has_usb_storage" var2="1"/>
 				<highlight color="%highlight_color%"/>
@@ -4834,6 +4989,140 @@
 			<object type="action">
 				<action function="page">mount</action>
 				<action function="set">tw_busy=0</action>
+			</object>
+		</page>
+		<page name="system_readonly_check">
+			<object type="action">
+				<action function="checkpartitionlifetimewrites">/system</action>
+			</object>
+			<object type="action">
+				<condition var1="tw_lifetime_writes" var2="1"/>
+				<actions>
+					<action function="mountsystemtoggle">0</action>
+					<action function="page">mount</action>
+				</actions>
+			</object>
+			<object type="action">
+				<condition var1="tw_lifetime_writes" var2="0"/>
+				<actions>
+					<action function="set">tw_back=mount</action>
+					<action function="page">system_readonly</action>
+				</actions>
+			</object>
+		</page>
+		<page name="system_readonly">
+			<object type="template" name="body"/>
+			<object type="template" name="ab_ex"/>
+			<object type="template" name="statusbarinfo"/>
+			<object type="button">
+				<placement x="%ab_back_x%" y="%ab_y%"/>
+				<font resource="body1" color="%text_button%"/>
+				<image resource="actionbar_back" highlightresource="actionbar_back_hl"/>
+				<action function="page">mount</action>
+			</object>
+			<object type="image">
+				<image resource="bc_mount"/>
+				<placement x="%ab_bc_x%" y="%ab_y%"/>
+			</object>
+			<object type="text" color="%text_actionbar%">
+				<font resource="title"/>
+				<placement x="%col1_x_indent%" y="%row1_2_y%" placement="2"/>
+				<text>System Partition</text>
+			</object>
+			<object type="text" color="%text_actionbar%">
+				<font resource="body1"/>
+				<placement x="%col1_x_indent%" y="%row1_2_y%"/>
+				<text>UNMODIFIED</text>
+			</object>
+			<object type="image">
+				<placement x="%col1_x%" y="%row2_2_y%"/>
+				<image resource="icon_info"/>
+			</object>
+			<object type="text" color="%highlight%">
+				<font resource="body2"/>
+				<placement x="%col1_x_indent%" y="%row2_2_y%"/>
+				<text>Unmodified system partition detected.</text>
+			</object>
+			<object type="text" color="%text%">
+				<font resource="body2"/>
+				<placement x="%col1_x_indent%" y="%row2_3a_y%"/>
+				<text>TWRP can leave your system partition</text>
+			</object>
+			<object type="text" color="%text%">
+				<font resource="body2"/>
+				<placement x="%col1_x_indent%" y="%row3_1a_y%"/>
+				<text>unmodified to make it easier for you to</text>
+			</object>
+			<object type="text" color="%text%">
+				<font resource="body2"/>
+				<placement x="%col1_x_indent%" y="%row3_2a_y%"/>
+				<text>take official updates.</text>
+			</object>
+			<object type="text" color="%text%">
+				<font resource="body2"/>
+				<placement x="%col1_x_indent%" y="%row3_3a_y%"/>
+				<text>TWRP will be unable to prevent the</text>
+			</object>
+			<object type="text" color="%text%">
+				<font resource="body2"/>
+				<placement x="%col1_x_indent%" y="%row4_1a_y%"/>
+				<text>stock ROM from replacing TWRP and</text>
+			</object>
+			<object type="text" color="%text%">
+				<font resource="body2"/>
+				<placement x="%col1_x_indent%" y="%row4_2a_y%"/>
+				<text>will not offer to root your device.</text>
+			</object>
+			<object type="text" color="%text_fail%">
+				<font resource="body2"/>
+				<placement x="%col1_x_indent%" y="%row5_1_y%"/>
+				<text>Zip installations or ADB operations</text>
+			</object>
+			<object type="text" color="%text_fail%">
+				<font resource="body2"/>
+				<placement x="%col1_x_indent%" y="%row5_2_y%"/>
+				<text>may still modify the system partition.</text>
+			</object>
+			<object type="checkbox">
+				<condition var1="tw_is_encrypted" var2="0"/>
+				<placement x="%col1_x%" y="%row6_1_y%"/>
+				<font resource="body2" color="%text%"/>
+				<text>Never show this screen during boot again</text>
+				<data variable="tw_never_show_system_ro_page"/>
+				<image checked="checkbox_true" unchecked="checkbox_false"/>
+			</object>
+			<object type="button">
+				<highlight color="%highlight_color%"/>
+				<placement x="%btn_raised_left_x%" y="%row6_3_y%"/>
+				<font resource="menu" color="%text_button%"/>
+				<image resource="btn_raised_keepreadonly"/>
+				<actions>
+					<action function="mountsystemtoggle">1</action>
+					<action function="set">tw_page_done=1</action>
+					<action function="page">%tw_back%</action>
+				</actions>
+			</object>
+			<object type="text" color="%text_dark%">
+				<font resource="caption"/>
+				<placement x="%center_x%" y="%slider_text_y%" placement="5"/>
+				<text>Swipe to Allow Modification</text>
+			</object>
+			<object type="slider">
+				<placement x="%center_x%" y="%slider_y%" placement="5"/>
+				<resource base="slider" used="slider_used" touch="handle_h"/>
+				<actions>
+					<action function="mountsystemtoggle">0</action>
+					<action function="set">tw_page_done=1</action>
+					<action function="page">%tw_back%</action>
+				</actions>
+			</object>
+			<object type="action">
+				<touch key="home"/>
+				<action function="page">main</action>
+			</object>
+			<object type="action">
+				<touch key="back"/>
+				<action function="page">mount</action>
 			</object>
 		</page>
 		<page name="decrypt">
