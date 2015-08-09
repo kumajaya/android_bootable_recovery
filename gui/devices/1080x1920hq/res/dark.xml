@@ -5032,7 +5032,7 @@
 			<object type="text" color="%text_actionbar%">
 				<font resource="body1"/>
 				<placement x="%col1_x_indent%" y="%row1_2_y%"/>
-				<text>UNMODIFIED</text>
+				<text>READ ONLY</text>
 			</object>
 			<object type="image">
 				<placement x="%col1_x%" y="%row2_2_y%"/>
@@ -5041,7 +5041,7 @@
 			<object type="text" color="%highlight%">
 				<font resource="body2"/>
 				<placement x="%col1_x_indent%" y="%row2_2_y%"/>
-				<text>Unmodified system partition detected.</text>
+				<text>Keep system read only?</text>
 			</object>
 			<object type="text" color="%text%">
 				<font resource="body2"/>
@@ -5118,11 +5118,17 @@
 			</object>
 			<object type="action">
 				<touch key="home"/>
-				<action function="page">main</action>
+				<actions>
+					<action function="set">tw_page_done=1</action>
+					<action function="page">main</action>
+				</actions>
 			</object>
 			<object type="action">
 				<touch key="back"/>
-				<action function="page">mount</action>
+				<actions>
+					<action function="set">tw_page_done=1</action>
+					<action function="page">%tw_back%</action>
+				</actions>
 			</object>
 		</page>
 		<page name="decrypt">
