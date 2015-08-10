@@ -408,7 +408,7 @@ bool TWPartition::Process_Fstab_Line(string Line, bool Display_Error) {
 	return true;
 }
 
-bool TWPartition::Process_FS_Flags(string& Options, int Flags) {
+bool TWPartition::Process_FS_Flags(string& Options, int& Flags) {
 	int i;
 	char *p;
 	char *savep;
@@ -1058,7 +1058,7 @@ bool TWPartition::Mount(bool Display_Error) {
 				LOGERR("Unable to mount '%s'\n", Mount_Point.c_str());
 			else
 				LOGINFO("Unable to mount '%s'\n", Mount_Point.c_str());
-			LOGINFO("Actual block device: '%s', current file system: '%s'\n", Actual_Block_Device.c_str(), Current_File_System.c_str());
+			LOGINFO("Actual block device: '%s', current file system: '%s', flags: 0x%8x, options: '%s'\n", Actual_Block_Device.c_str(), Current_File_System.c_str(), flags, Mount_Options.c_str());
 			return false;
 #ifdef TW_NO_EXFAT_FUSE
 		}
