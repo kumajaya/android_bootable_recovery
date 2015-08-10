@@ -326,6 +326,9 @@ endif
 ifneq ($(TARGET_RECOVERY_INITRC),)
     TW_EXCLUDE_DEFAULT_USB_INIT := true
 endif
+ifeq ($(TW_UNMOUNT_FIRMWARE_ON_BOOT), true)
+    LOCAL_CFLAGS += -DTW_UNMOUNT_FIRMWARE_ON_BOOT
+endif
 ifeq ($(shell test $(PLATFORM_SDK_VERSION) -gt 22; echo $$?),0)
     LOCAL_CFLAGS += -DTW_USE_NEW_MINADBD
 endif
