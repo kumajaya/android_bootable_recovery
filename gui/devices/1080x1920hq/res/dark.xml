@@ -2256,8 +2256,8 @@
 			</object>
 			<object type="button">
 				<conditions>
-					<condition var1="tw_reboot_bootloader" op="!=" var2="1"/>
 					<condition var1="tw_download_mode" var2="1"/>
+					<condition var1="tw_reboot_bootloader" op="!=" var2="1"/>
 				</conditions>
 				<highlight color="%highlight_color%"/>
 				<placement x="%col1_x%" y="%mb_row3_y%"/>
@@ -2300,60 +2300,11 @@
 			</object>
 			<object type="button">
 				<conditions>
-					<condition var1="tw_reboot_bootloader" var2="1"/>
-					<condition var1="tw_download_mode" var2="1"/>
-				</conditions>
-				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row4_y%"/>
-				<font resource="title" color="%text_button%"/>
-				<image resource="mb_download_color"/>
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=download</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to restart?</action>
-					<action function="set">tw_action_text1=Restarting...</action>
-					<action function="set">tw_complete_text1=Restarting...</action>
-					<action function="set">tw_slider_text=Swipe to Restart</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>
-			<object type="button">
-				<condition var1="tw_download_mode" op="!=" var2="1"/>
-				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row4_y%"/>
-				<font resource="body1" color="%text_button%"/>
-				<image resource="mb_theme_color"/>
-				<action function="reload"/>
-			</object>
-			<object type="button">
-				<condition var1="tw_reboot_bootloader" op="!=" var2="1"/>
-				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row4_y%"/>
-				<font resource="body1" color="%text_button%"/>
-				<image resource="mb_theme_color"/>
-				<action function="reload"></action>
-			</object>
-			<object type="button">
-				<conditions>
-					<condition var1="tw_reboot_bootloader" var2="1"/>
-					<condition var1="tw_download_mode" var2="1"/>
-				</conditions>
-				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row5_y%"/>
-				<font resource="body1" color="%text_button%"/>
-				<image resource="mb_theme_color"/>
-				<action function="reload"></action>
-			</object>
-			<object type="button">
-				<conditions>
 					<condition var1="tw_reboot_poweroff" var2="1"/>
 					<condition var1="tw_download_mode" op="!=" var2="1"/>
 				</conditions>
 				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row5_y%"/>
+				<placement x="%col1_x%" y="%mb_row4_y%"/>
 				<font resource="title" color="%text_button%"/>
 				<image resource="mb_poweroff_color"/>
 				<actions>
@@ -2375,7 +2326,7 @@
 					<condition var1="tw_reboot_bootloader" op="!=" var2="1"/>
 				</conditions>
 				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row5_y%"/>
+				<placement x="%col1_x%" y="%mb_row4_y%"/>
 				<font resource="title" color="%text_button%"/>
 				<image resource="mb_poweroff_color"/>
 				<actions>
@@ -2398,7 +2349,7 @@
 					<condition var1="tw_download_mode" var2="1"/>
 				</conditions>
 				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row6_y%"/>
+				<placement x="%col1_x%" y="%mb_row4_y%"/>
 				<font resource="title" color="%text_button%"/>
 				<image resource="mb_poweroff_color"/>
 				<actions>
