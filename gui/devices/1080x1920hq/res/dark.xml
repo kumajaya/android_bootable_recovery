@@ -4938,27 +4938,25 @@
 				<condition var1="tw_lifetime_writes" var2="1"/>
 				<actions>
 					<action function="mountsystemtoggle">0</action>
-					<action function="page">mount</action>
+					<action function="page">main</action>
 				</actions>
 			</object>
 			<object type="action">
 				<condition var1="tw_lifetime_writes" var2="0"/>
 				<actions>
-					<action function="set">tw_back=mount</action>
+					<action function="set">tw_back=main</action>
 					<action function="page">system_readonly</action>
 				</actions>
 			</object>
 		</page>
 		<page name="system_readonly">
-			<object type="template" name="body"/>
+			<background color="%background%"/>
+			<object type="image">
+				<image resource="divider_wide"/>
+				<placement x="%center_x%" y="%row_nav_y%" placement="4"/>
+			</object>
 			<object type="template" name="ab_ex"/>
 			<object type="template" name="statusbarinfo"/>
-			<object type="button">
-				<placement x="%ab_back_x%" y="%ab_y%"/>
-				<font resource="body1" color="%text_button%"/>
-				<image resource="actionbar_back" highlightresource="actionbar_back_hl"/>
-				<action function="page">mount</action>
-			</object>
 			<object type="image">
 				<image resource="bc_mount"/>
 				<placement x="%ab_bc_x%" y="%ab_y%"/>
@@ -5054,6 +5052,14 @@
 					<action function="set">tw_page_done=1</action>
 					<action function="page">%tw_back%</action>
 				</actions>
+			</object>
+			<object type="action">
+				<touch key="power"/>
+				<action function="overlay">lock</action>
+			</object>
+			<object type="action">
+				<touch key="power+voldown"/>
+				<action function="screenshot"/>
 			</object>
 		</page>
 		<page name="decrypt">

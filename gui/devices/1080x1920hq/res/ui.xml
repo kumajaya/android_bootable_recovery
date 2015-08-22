@@ -171,7 +171,7 @@
 		<resource name="mb_poweroff_color" type="image" filename="mb_poweroff_color"/>
 		<resource name="mb_download_color" type="image" filename="mb_download_color"/>
 		<resource name="mb_logtosd_color" type="image" filename="mb_logtosd_color"/>
-		<resource name="mb_fixpermissions_color" type="image" filename="mb_fixpermissions_color"/>
+		<resource name="mb_logtosd_color" type="image" filename="mb_logtosd_color"/>
 		<resource name="mb_terminalcommand_color" type="image" filename="mb_terminalcommand_color"/>
 		<resource name="mb_adbsideload_color" type="image" filename="mb_adbsideload_color"/>
 		<resource name="mb_dumlock_color" type="image" filename="mb_dumlock_color"/>
