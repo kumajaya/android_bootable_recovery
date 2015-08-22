@@ -5116,20 +5116,6 @@
 					<action function="page">%tw_back%</action>
 				</actions>
 			</object>
-			<object type="action">
-				<touch key="home"/>
-				<actions>
-					<action function="set">tw_page_done=1</action>
-					<action function="page">main</action>
-				</actions>
-			</object>
-			<object type="action">
-				<touch key="back"/>
-				<actions>
-					<action function="set">tw_page_done=1</action>
-					<action function="page">%tw_back%</action>
-				</actions>
-			</object>
 		</page>
 		<page name="decrypt">
 			<object type="action">
