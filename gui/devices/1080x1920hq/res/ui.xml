@@ -167,10 +167,8 @@
 		<resource name="mb_system_color" type="image" filename="mb_system_color"/>
 		<resource name="mb_recovery_color" type="image" filename="mb_recovery_color"/>
 		<resource name="mb_bootloader_color" type="image" filename="mb_bootloader_color"/>
-		<resource name="mb_theme_color" type="image" filename="mb_theme_color"/>
 		<resource name="mb_poweroff_color" type="image" filename="mb_poweroff_color"/>
 		<resource name="mb_download_color" type="image" filename="mb_download_color"/>
-		<resource name="mb_logtosd_color" type="image" filename="mb_logtosd_color"/>
 		<resource name="mb_logtosd_color" type="image" filename="mb_logtosd_color"/>
 		<resource name="mb_terminalcommand_color" type="image" filename="mb_terminalcommand_color"/>
 		<resource name="mb_adbsideload_color" type="image" filename="mb_adbsideload_color"/>
