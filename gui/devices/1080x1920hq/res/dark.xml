@@ -1921,19 +1921,7 @@
 				<image resource="hider_ab_ex"/>
 				<placement x="%screen_w%" y="%row0_y%" placement="1"/>
 			</object>
-			<object type="image">
-				<condition var1="tw_action" var2="fixpermissions"/>
-				<placement x="%col1_x%" y="%row2_3_y%"/>
-				<image resource="icon_info"/>
-			</object>
 			<object type="text" color="%text_highlight%">
-				<condition var1="tw_action" var2="fixpermissions"/>
-				<font resource="body2"/>
-				<placement x="%col1_x_indent%" y="%row2_3_y%"/>
-				<text>%tw_text2%</text>
-			</object>
-			<object type="text" color="%text_highlight%">
-				<condition var1="tw_action" op="!=" var2="fixpermissions"/>
 				<font resource="body2"/>
 				<placement x="%col1_x%" y="%row2_3_y%"/>
 				<text>%tw_text2%</text>
@@ -6142,19 +6130,12 @@
 				<highlight color="%highlight_color%"/>
 				<placement x="%col1_x%" y="%mb_row2_y%"/>
 				<font resource="title" color="%text_button%"/>
-				<image resource="mb_fixpermissions_color"/>
-				<action function="page">fixpermissions</action>
-			</object>
-			<object type="button">
-				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row3_y%"/>
-				<font resource="title" color="%text_button%"/>
 				<image resource="mb_terminalcommand_color"/>
 				<action function="page">terminalfolder</action>
 			</object>
 			<object type="button">
 				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row4_y%"/>
+				<placement x="%col1_x%" y="%mb_row3_y%"/>
 				<font resource="title" color="%text_button%"/>
 				<image resource="mb_adbsideload_color"/>
 				<action function="page">sideload</action>
@@ -6162,7 +6143,7 @@
 			<object type="button">
 				<condition var1="tw_show_dumlock" var2="1"/>
 				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row5_y%"/>
+				<placement x="%col1_x%" y="%mb_row4_y%"/>
 				<font resource="body1" color="%text_button%"/>
 				<image resource="mb_dumlock_color"/>
 				<action function="page">htcdumlock</action>
@@ -6170,7 +6151,7 @@
 			<object type="button">
 				<condition var1="tw_has_injecttwrp" var2="1"/>
 				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row6_y%"/>
+				<placement x="%col1_x%" y="%mb_row5_y%"/>
 				<font resource="title" color="%text_button%"/>
 				<image resource="mb_reinjecttwrp_color"/>
 				<actions>
@@ -6186,7 +6167,7 @@
 			<object type="button">
 				<condition var1="tw_allow_partition_sdcard" var2="1"/>
 				<highlight color="%highlight_color%"/>
-				<placement x="%col1_x%" y="%mb_row7_y%"/>
+				<placement x="%col1_x%" y="%mb_row6_y%"/>
 				<font resource="body1" color="%text_button%"/>
 				<image resource="mb_partsdcard_color"/>
 				<action function="page">partsdcard</action>
@@ -6198,83 +6179,6 @@
 			<object type="action">
 				<touch key="back"/>
 				<action function="page">main</action>
-			</object>
-		</page>
-		<page name="fixpermissions">
-			<object type="template" name="body"/>
-			<object type="template" name="ab_ex"/>
-			<object type="template" name="statusbarinfo"/>
-			<object type="button">
-				<placement x="%ab_back_x%" y="%ab_y%"/>
-				<font resource="body1" color="%text_button%"/>
-				<image resource="actionbar_back" highlightresource="actionbar_back_hl"/>
-				<action function="page">advanced</action>
-			</object>
-			<object type="image">
-				<image resource="bc_confirmaction"/>
-				<placement x="%ab_bc_x%" y="%ab_y%"/>
-				<font resource="menu" color="%text_button%"/>
-			</object>
-			<object type="text" color="%text_actionbar%">
-				<font resource="title"/>
-				<placement x="%col1_x_indent%" y="%row1_2_y%" placement="2"/>
-				<text>Fix Permissions?</text>
-			</object>
-			<object type="image">
-				<placement x="%col1_x%" y="%row2_2_y%"/>
-				<image resource="icon_info"/>
-			</object>
-			<object type="text" color="%text%">
-				<font resource="body2"/>
-				<placement x="%col1_x_indent%" y="%row2_2_y%"/>
-				<text>Fixing permissions is rarely needed.</text>
-			</object>
-			<object type="checkbox">
-				<placement x="%col1_x%" y="%row3_2_y%"/>
-				<font resource="body2" color="%text%"/>
-				<text>Also fix SELinux contexts</text>
-				<data variable="tw_fixperms_restorecon"/>
-				<image checked="checkbox_true" unchecked="checkbox_false"/>
-			</object>
-			<object type="image">
-				<placement x="%col1_x%" y="%row4_1_y%"/>
-				<image resource="icon_warning"/>
-			</object>
-			<object type="text" color="%text_fail%">
-				<font resource="body2"/>
-				<placement x="%col1_x_indent%" y="%row4_1_y%"/>
-				<text>Fixing SELinux contexts may cause</text>
-			</object>
-			<object type="text" color="%text_fail%">
-				<font resource="body2"/>
-				<placement x="%col1_x_indent%" y="%row4_2_y%"/>
-				<text>your device to not boot properly.</text>
-			</object>
-			<object type="text" color="%text_dark%">
-				<font resource="caption"/>
-				<placement x="%center_x%" y="%slider_text_y%" placement="5"/>
-				<text>Swipe to fix permissions</text>
-			</object>
-			<object type="slider">
-				<placement x="%center_x%" y="%slider_y%" placement="5"/>
-				<resource base="slider" used="slider_used" touch="handle_h"/>
-				<actions>
-					<action function="set">tw_back=advanced</action>
-					<action function="set">tw_action=fixpermissions</action>
-					<action function="set">tw_action_text1=Fixing Permissions...</action>
-					<action function="set">tw_complete_text1=Fix Permissions Complete</action>
-					<action function="set">tw_slider_text=Swipe to Confirm</action>
-					<action function="set">tw_show_reboot=1</action>
-					<action function="page">action_page</action>
-				</actions>
-			</object>
-			<object type="action">
-				<touch key="home"/>
-				<action function="page">main</action>
-			</object>
-			<object type="action">
-				<touch key="back"/>
-				<action function="page">advanced</action>
 			</object>
 		</page>
 		<page name="partsdcard">
