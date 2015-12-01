@@ -449,7 +449,7 @@
 			<object type="button">
 				<condition var1="tw_screen_timeout_secs" op="=" var2="0"/>
 				<condition var1="tw_no_screen_timeout" op="!=" var2="1"/>
-				<placement x="%col1_x%" y="%row4_2_y%"/>
+				<placement x="%col1_x%" y="%row4_2_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>Enable screen timeout</text>
 				<image resource="checkbox_false"/>
@@ -458,7 +458,7 @@
 			<object type="button">
 				<condition var1="tw_screen_timeout_secs" op="!=" var2="0"/>
 				<condition var1="tw_no_screen_timeout" op="!=" var2="1"/>
-				<placement x="%col1_x%" y="%row4_2_y%"/>
+				<placement x="%col1_x%" y="%row4_2_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>Enable screen timeout</text>
 				<image resource="checkbox_true"/>
@@ -3058,7 +3058,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="!=" var2="ext2"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col1_x%" y="%row5_3_y%"/>
+				<placement x="%col1_x%" y="%row5_3_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>EXT2          </text>
 				<image resource="radio_false"/>
@@ -3078,7 +3078,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="=" var2="ext2"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col1_x%" y="%row5_3_y%"/>
+				<placement x="%col1_x%" y="%row5_3_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>EXT2          </text>
 				<image resource="radio_true"/>
@@ -3098,7 +3098,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="!=" var2="ext3"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col1_x%" y="%row6_1a_y%"/>
+				<placement x="%col1_x%" y="%row6_1a_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>EXT3          </text>
 				<image resource="radio_false"/>
@@ -3118,7 +3118,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="=" var2="ext3"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col1_x%" y="%row6_1a_y%"/>
+				<placement x="%col1_x%" y="%row6_1a_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>EXT3          </text>
 				<image resource="radio_true"/>
@@ -3138,7 +3138,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="!=" var2="ext4"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col1_x%" y="%row6_3_y%"/>
+				<placement x="%col1_x%" y="%row6_3_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>EXT4          </text>
 				<image resource="radio_false"/>
@@ -3158,7 +3158,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="=" var2="ext4"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col1_x%" y="%row6_3_y%"/>
+				<placement x="%col1_x%" y="%row6_3_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>EXT4          </text>
 				<image resource="radio_true"/>
@@ -3178,7 +3178,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="!=" var2="fat"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col2_x%" y="%row5_3_y%"/>
+				<placement x="%col2_x%" y="%row5_3_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>FAT          </text>
 				<image resource="radio_false"/>
@@ -3198,7 +3198,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="=" var2="fat"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col2_x%" y="%row5_3_y%"/>
+				<placement x="%col2_x%" y="%row5_3_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>FAT          </text>
 				<image resource="radio_true"/>
@@ -3218,7 +3218,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="!=" var2="exfat"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col2_x%" y="%row6_1a_y%"/>
+				<placement x="%col2_x%" y="%row6_1a_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>exFAT          </text>
 				<image resource="radio_false"/>
@@ -3238,7 +3238,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="=" var2="exfat"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col2_x%" y="%row6_1a_y%"/>
+				<placement x="%col2_x%" y="%row6_1a_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>exFAT          </text>
 				<image resource="radio_true"/>
@@ -3258,7 +3258,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="!=" var2="f2fs"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col2_x%" y="%row6_3_y%"/>
+				<placement x="%col2_x%" y="%row6_3_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>F2FS          </text>
 				<image resource="radio_false"/>
@@ -3278,7 +3278,7 @@
 			<object type="button">
 				<condition var1="tw_action_new_file_system" op="=" var2="f2fs"/>
 				<condition var1="tw_partition_ext" op="=" var2="1"/>
-				<placement x="%col2_x%" y="%row6_3_y%"/>
+				<placement x="%col2_x%" y="%row6_3_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>F2FS          </text>
 				<image resource="radio_true"/>
@@ -4812,7 +4812,7 @@
 			</object>
 			<object type="button">
 				<condition var1="tw_mount_system_ro" op="=" var2="0"/>
-				<placement x="%col1_x%" y="%row7_2_y%"/>
+				<placement x="%col1_x%" y="%row7_2_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>Only mount system read-only</text>
 				<image resource="checkbox_false"/>
@@ -4820,7 +4820,7 @@
 			</object>
 			<object type="button">
 				<condition var1="tw_mount_system_ro" op="!=" var2="0"/>
-				<placement x="%col1_x%" y="%row7_2_y%"/>
+				<placement x="%col1_x%" y="%row7_2_y%" textplacement="6"/>
 				<font resource="body2" color="%text%"/>
 				<text>Only mount system read-only</text>
 				<image resource="checkbox_true"/>
