@@ -297,7 +297,7 @@
 		<variable name="list_font" value="small" persist="1" />
 		<variable name="bookmark" value="0" persist="1" />
 		<variable name="navbar_sams" value="0" persist="1" />
-		<variable name="menu_btn_solid" value="0" persist="1" />
+		<variable name="menu_btn_solid" value="1" persist="1" />
 		<variable name="hl_color" value="Light Blue" persist="1" />
 		<variable name="location_install" value="/sdcard/Download" persist="1" />
 		<variable name="location_install_image" value="/sdcard/Download" persist="1" />
