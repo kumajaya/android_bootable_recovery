@@ -62,8 +62,6 @@
 
 		<resource name="btn_float_addtoqueue" type="image" filename="btn_float_addtoqueue" />
 		<resource name="btn_float_addtoqueue_hl" type="image" filename="btn_float_addtoqueue_hl" />
-		<resource name="btn_float_flashifyinfo" type="image" filename="btn_float_flashifyinfo" />
-		<resource name="btn_float_flashifyinfo_hl" type="image" filename="btn_float_flashifyinfo_hl" />
 		<resource name="btn_float_accept" type="image" filename="btn_float_accept" />
 		<resource name="btn_float_folder" type="image" filename="btn_float_folder" />
 
@@ -285,7 +283,6 @@
 	<variables>
 		<!--theme settings-->
 		<variable name="theme_version" value="287X_v2" />
-		<variable name="use_flashify" value="0" persist="1" />
 		<variable name="alt_lock" value="1" persist="1" />
 		<variable name="inject_theme" value="0" persist="1" />
 		<variable name="auto_flash_repack" value="0" persist="1" />
