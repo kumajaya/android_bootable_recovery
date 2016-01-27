@@ -3093,53 +3093,106 @@
 			<object type="button">
 				<conditions>
 					<condition var1="menu_btn_solid" var2="0" />
+					<condition var1="tw_reboot_poweroff" var2="1" />
 					<condition var1="tw_download_mode" op="!=" var2="1" />
 				</conditions>
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row4_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="mb_theme" />
-				<action function="reload"></action>
+				<font resource="title" color="%text_button%" />
+				<image resource="mb_poweroff" />
+				<actions>
+					<action function="set">tw_back=reboot</action>
+					<action function="set">tw_action=reboot</action>
+					<action function="set">tw_action_param=poweroff</action>
+					<action function="set">tw_has_action2=0</action>
+					<action function="set">tw_text1=No OS Installed!</action>
+					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
+					<action function="set">tw_action_text1=Turning Off...</action>
+					<action function="set">tw_complete_text1=Turning Off...</action>
+					<action function="set">tw_slider_text=Swipe to Power Off</action>
+					<action function="page">rebootcheck</action>
+				</actions>
 			</object>
 
 			<object type="button">
 				<conditions>
 					<condition var1="menu_btn_solid" var2="1" />
+					<condition var1="tw_reboot_poweroff" var2="1" />
 					<condition var1="tw_download_mode" op="!=" var2="1" />
 				</conditions>
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row4_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="mb_theme_color" />
-				<action function="reload"></action>
+				<font resource="title" color="%text_button%" />
+				<image resource="mb_poweroff_color" />
+				<actions>
+					<action function="set">tw_back=reboot</action>
+					<action function="set">tw_action=reboot</action>
+					<action function="set">tw_action_param=poweroff</action>
+					<action function="set">tw_has_action2=0</action>
+					<action function="set">tw_text1=No OS Installed!</action>
+					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
+					<action function="set">tw_action_text1=Turning Off...</action>
+					<action function="set">tw_complete_text1=Turning Off...</action>
+					<action function="set">tw_slider_text=Swipe to Power Off</action>
+					<action function="page">rebootcheck</action>
+				</actions>
 			</object>
 
 			<object type="button">
 				<conditions>
 					<condition var1="menu_btn_solid" var2="0" />
+					<condition var1="tw_reboot_poweroff" var2="1" />
 					<condition var1="tw_reboot_bootloader" op="!=" var2="1" />
 				</conditions>
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row4_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="mb_theme" />
-				<action function="reload"></action>
+				<font resource="title" color="%text_button%" />
+				<image resource="mb_poweroff" />
+				<actions>
+					<action function="set">tw_back=reboot</action>
+					<action function="set">tw_action=reboot</action>
+					<action function="set">tw_action_param=poweroff</action>
+					<action function="set">tw_has_action2=0</action>
+					<action function="set">tw_text1=No OS Installed!</action>
+					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
+					<action function="set">tw_action_text1=Turning Off...</action>
+					<action function="set">tw_complete_text1=Turning Off...</action>
+					<action function="set">tw_slider_text=Swipe to Power Off</action>
+					<action function="page">rebootcheck</action>
+				</actions>
 			</object>
 
 			<object type="button">
 				<conditions>
 					<condition var1="menu_btn_solid" var2="1" />
+					<condition var1="tw_reboot_poweroff" var2="1" />
 					<condition var1="tw_reboot_bootloader" op="!=" var2="1" />
 				</conditions>
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row4_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="mb_theme_color" />
-				<action function="reload"></action>
+				<font resource="title" color="%text_button%" />
+				<image resource="mb_poweroff_color" />
+				<actions>
+					<action function="set">tw_back=reboot</action>
+					<action function="set">tw_action=reboot</action>
+					<action function="set">tw_action_param=poweroff</action>
+					<action function="set">tw_has_action2=0</action>
+					<action function="set">tw_text1=No OS Installed!</action>
+					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
+					<action function="set">tw_action_text1=Turning Off...</action>
+					<action function="set">tw_complete_text1=Turning Off...</action>
+					<action function="set">tw_slider_text=Swipe to Power Off</action>
+					<action function="page">rebootcheck</action>
+				</actions>
 			</object>
 
 			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
+				<conditions>
+					<condition var1="menu_btn_solid" var2="0" />
+					<condition var1="tw_reboot_poweroff" var2="1" />
+					<condition var1="tw_reboot_bootloader" var2="1" />
+					<condition var1="tw_download_mode" var2="1" />
+				</conditions>
 				<image resource="divider_list" />
 				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
 			</object>
@@ -3147,145 +3200,12 @@
 			<object type="button">
 				<conditions>
 					<condition var1="menu_btn_solid" var2="0" />
-					<condition var1="tw_reboot_bootloader" var2="1" />
-					<condition var1="tw_download_mode" var2="1" />
-				</conditions>
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="mb_theme" />
-				<action function="reload"></action>
-			</object>
-
-			<object type="button">
-				<conditions>
-					<condition var1="menu_btn_solid" var2="1" />
-					<condition var1="tw_reboot_bootloader" var2="1" />
-					<condition var1="tw_download_mode" var2="1" />
-				</conditions>
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
-				<font resource="body1" color="%text_button%" />
-				<image resource="mb_theme_color" />
-				<action function="reload"></action>
-			</object>
-
-			<object type="button">
-				<conditions>
-					<condition var1="menu_btn_solid" var2="0" />
-					<condition var1="tw_reboot_poweroff" var2="1" />
-					<condition var1="tw_download_mode" op="!=" var2="1" />
-				</conditions>
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_poweroff" />
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=poweroff</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
-					<action function="set">tw_action_text1=Turning Off...</action>
-					<action function="set">tw_complete_text1=Turning Off...</action>
-					<action function="set">tw_slider_text=Swipe to Power Off</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>
-
-			<object type="button">
-				<conditions>
-					<condition var1="menu_btn_solid" var2="1" />
-					<condition var1="tw_reboot_poweroff" var2="1" />
-					<condition var1="tw_download_mode" op="!=" var2="1" />
-				</conditions>
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_poweroff_color" />
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=poweroff</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
-					<action function="set">tw_action_text1=Turning Off...</action>
-					<action function="set">tw_complete_text1=Turning Off...</action>
-					<action function="set">tw_slider_text=Swipe to Power Off</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>
-
-			<object type="button">
-				<conditions>
-					<condition var1="menu_btn_solid" var2="0" />
-					<condition var1="tw_reboot_poweroff" var2="1" />
-					<condition var1="tw_reboot_bootloader" op="!=" var2="1" />
-				</conditions>
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_poweroff" />
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=poweroff</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
-					<action function="set">tw_action_text1=Turning Off...</action>
-					<action function="set">tw_complete_text1=Turning Off...</action>
-					<action function="set">tw_slider_text=Swipe to Power Off</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>
-
-			<object type="button">
-				<conditions>
-					<condition var1="menu_btn_solid" var2="1" />
-					<condition var1="tw_reboot_poweroff" var2="1" />
-					<condition var1="tw_reboot_bootloader" op="!=" var2="1" />
-				</conditions>
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_poweroff_color" />
-				<actions>
-					<action function="set">tw_back=reboot</action>
-					<action function="set">tw_action=reboot</action>
-					<action function="set">tw_action_param=poweroff</action>
-					<action function="set">tw_has_action2=0</action>
-					<action function="set">tw_text1=No OS Installed!</action>
-					<action function="set">tw_text2=Are you sure you wish to Power Off?</action>
-					<action function="set">tw_action_text1=Turning Off...</action>
-					<action function="set">tw_complete_text1=Turning Off...</action>
-					<action function="set">tw_slider_text=Swipe to Power Off</action>
-					<action function="page">rebootcheck</action>
-				</actions>
-			</object>
-
-			<object type="image">
-				<conditions>
-					<condition var1="menu_btn_solid" var2="0" />
-					<condition var1="tw_reboot_poweroff" var2="1" />
-					<condition var1="tw_reboot_bootloader" var2="1" />
-					<condition var1="tw_download_mode" var2="1" />
-				</conditions>
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row6_y%" placement="4" />
-			</object>
-
-			<object type="button">
-				<conditions>
-					<condition var1="menu_btn_solid" var2="0" />
 					<condition var1="tw_reboot_poweroff" var2="1" />
 					<condition var1="tw_reboot_bootloader" var2="1" />
 					<condition var1="tw_download_mode" var2="1" />
 				</conditions>
 				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row6_y%" />
+				<placement x="%col1_x%" y="%mb_row5_y%" />
 				<font resource="title" color="%text_button%" />
 				<image resource="mb_poweroff" />
 				<actions>
@@ -3310,7 +3230,7 @@
 					<condition var1="tw_download_mode" var2="1" />
 				</conditions>
 				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row6_y%" />
+				<placement x="%col1_x%" y="%mb_row5_y%" />
 				<font resource="title" color="%text_button%" />
 				<image resource="mb_poweroff_color" />
 				<actions>
