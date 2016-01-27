@@ -7806,7 +7806,7 @@
 				</actions>
 			</object>
 
-			<object type="image">
+			<!-- object type="image">
 				<condition var1="menu_btn_solid" var2="0" />
 				<image resource="divider_list" />
 				<placement x="%center_x%" y="%mb_row2_y%" placement="4" />
@@ -7828,6 +7828,30 @@
 				<font resource="title" color="%text_button%" />
 				<image resource="mb_fixpermissions_color" />
 				<action function="page">fixpermissions</action>
+			</object -->
+
+			<object type="image">
+				<condition var1="menu_btn_solid" var2="0" />
+				<image resource="divider_list" />
+				<placement x="%center_x%" y="%mb_row2_y%" placement="4" />
+			</object>
+
+			<object type="button">
+				<condition var1="menu_btn_solid" var2="0" />
+				<highlight color="%highlight_color%" />
+				<placement x="%col1_x%" y="%mb_row2_y%" />
+				<font resource="title" color="%text_button%" />
+				<image resource="mb_terminalcommand" />
+				<action function="page">terminalfolder</action>
+			</object>
+
+			<object type="button">
+				<condition var1="menu_btn_solid" var2="1" />
+				<highlight color="%highlight_color%" />
+				<placement x="%col1_x%" y="%mb_row2_y%" />
+				<font resource="title" color="%text_button%" />
+				<image resource="mb_terminalcommand_color" />
+				<action function="page">terminalfolder</action>
 			</object>
 
 			<object type="image">
@@ -7841,30 +7865,6 @@
 				<highlight color="%highlight_color%" />
 				<placement x="%col1_x%" y="%mb_row3_y%" />
 				<font resource="title" color="%text_button%" />
-				<image resource="mb_terminalcommand" />
-				<action function="page">terminalfolder</action>
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="1" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row3_y%" />
-				<font resource="title" color="%text_button%" />
-				<image resource="mb_terminalcommand_color" />
-				<action function="page">terminalfolder</action>
-			</object>
-
-			<object type="image">
-				<condition var1="menu_btn_solid" var2="0" />
-				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row4_y%" placement="4" />
-			</object>
-
-			<object type="button">
-				<condition var1="menu_btn_solid" var2="0" />
-				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row4_y%" />
-				<font resource="title" color="%text_button%" />
 				<image resource="mb_adbsideload" />
 				<action function="page">sideload</action>
 			</object>
@@ -7872,7 +7872,7 @@
 			<object type="button">
 				<condition var1="menu_btn_solid" var2="1" />
 				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row4_y%" />
+				<placement x="%col1_x%" y="%mb_row3_y%" />
 				<font resource="title" color="%text_button%" />
 				<image resource="mb_adbsideload_color" />
 				<action function="page">sideload</action>
@@ -7882,7 +7882,7 @@
 				<condition var1="menu_btn_solid" var2="0" />
 				<condition var1="tw_show_dumlock" var2="1" />
 				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
+				<placement x="%center_x%" y="%mb_row4_y%" placement="4" />
 			</object>
 
 			<object type="image">
@@ -7890,7 +7890,7 @@
 				<condition var1="tw_show_dumlock" var2="0" />
 				<condition var1="tw_has_injecttwrp" var2="1" />
 				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
+				<placement x="%center_x%" y="%mb_row4_y%" placement="4" />
 			</object>
 
 			<object type="image">
@@ -7898,14 +7898,14 @@
 				<condition var1="tw_show_dumlock" var2="0" />
 				<condition var1="tw_allow_partition_sdcard" var2="1" />
 				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
+				<placement x="%center_x%" y="%mb_row4_y%" placement="4" />
 			</object>
 
 			<object type="button">
 				<condition var1="menu_btn_solid" var2="0" />
 				<condition var1="tw_show_dumlock" var2="1" />
 				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
+				<placement x="%col1_x%" y="%mb_row4_y%" />
 				<font resource="body1" color="%text_button%" />
 				<image resource="mb_dumlock" />
 				<action function="page">htcdumlock</action>
@@ -7915,7 +7915,7 @@
 				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_show_dumlock" var2="1" />
 				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row5_y%" />
+				<placement x="%col1_x%" y="%mb_row4_y%" />
 				<font resource="body1" color="%text_button%" />
 				<image resource="mb_dumlock_color" />
 				<action function="page">htcdumlock</action>
@@ -7925,7 +7925,7 @@
 				<condition var1="menu_btn_solid" var2="0" />
 				<condition var1="tw_has_injecttwrp" var2="1" />
 				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row6_y%" placement="4" />
+				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
 			</object>
 
 			<object type="image">
@@ -7933,14 +7933,14 @@
 				<condition var1="tw_has_injecttwrp" var2="0" />
 				<condition var1="tw_allow_partition_sdcard" var2="1" />
 				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row6_y%" placement="4" />
+				<placement x="%center_x%" y="%mb_row5_y%" placement="4" />
 			</object>
 
 			<object type="button">
 				<condition var1="menu_btn_solid" var2="0" />
 				<condition var1="tw_has_injecttwrp" var2="1" />
 				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row6_y%" />
+				<placement x="%col1_x%" y="%mb_row5_y%" />
 				<font resource="title" color="%text_button%" />
 				<image resource="mb_reinjecttwrp" />
 				<actions>
@@ -7958,7 +7958,7 @@
 				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_has_injecttwrp" var2="1" />
 				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row6_y%" />
+				<placement x="%col1_x%" y="%mb_row5_y%" />
 				<font resource="title" color="%text_button%" />
 				<image resource="mb_reinjecttwrp_color" />
 				<actions>
@@ -7977,7 +7977,7 @@
 				<condition var1="tw_has_injecttwrp" var2="0" />
 				<condition var1="tw_allow_partition_sdcard" var2="1" />
 				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row7_y%" placement="4" />
+				<placement x="%center_x%" y="%mb_row6_y%" placement="4" />
 			</object>
 
 			<object type="image">
@@ -7985,14 +7985,14 @@
 				<condition var1="tw_has_injecttwrp" var2="1" />
 				<condition var1="tw_allow_partition_sdcard" var2="1" />
 				<image resource="divider_list" />
-				<placement x="%center_x%" y="%mb_row7_y%" placement="4" />
+				<placement x="%center_x%" y="%mb_row6_y%" placement="4" />
 			</object>
 
 			<object type="button">
 				<condition var1="menu_btn_solid" var2="0" />
 				<condition var1="tw_allow_partition_sdcard" var2="1" />
 				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row7_y%" />
+				<placement x="%col1_x%" y="%mb_row6_y%" />
 				<font resource="body1" color="%text_button%" />
 				<image resource="mb_partsdcard" />
 				<action function="page">partsdcard</action>
@@ -8002,7 +8002,7 @@
 				<condition var1="menu_btn_solid" var2="1" />
 				<condition var1="tw_allow_partition_sdcard" var2="1" />
 				<highlight color="%highlight_color%" />
-				<placement x="%col1_x%" y="%mb_row7_y%" />
+				<placement x="%col1_x%" y="%mb_row6_y%" />
 				<font resource="body1" color="%text_button%" />
 				<image resource="mb_partsdcard_color" />
 				<action function="page">partsdcard</action>
