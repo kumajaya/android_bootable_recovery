@@ -88,7 +88,8 @@ LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
 LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)$(TWRES_PATH)
 TWRP_RES := $(commands_recovery_local_path)/gui/devices/common/res/*
 # enable this to use new themes:
-TWRP_NEW_THEME := true
+TWRP_NEW_THEME := false
+TWRP_MATERIALISED_THEME := true
 
 ifeq ($(TW_CUSTOM_THEME),)
     ifeq ($(TW_THEME),)
@@ -125,6 +126,20 @@ ifeq ($(wildcard $(TWRP_THEME_LOC)/ui.xml),)
     $(warning * Please choose an appropriate TW_THEME or create a new one for your device.)
     $(warning * Available themes:)
     $(warning * $(notdir $(wildcard $(commands_recovery_local_path)/gui/theme/*_*)))
+    $(warning ****************************************************************************)
+    $(error stopping)
+endif
+else ifeq ($(TWRP_MATERIALISED_THEME),true)
+    TWRP_THEME_LOC := $(commands_recovery_local_path)/gui/materialised/$(TW_THEME)
+    TWRP_RES := $(commands_recovery_local_path)/gui/materialised/common/fonts
+    TWRP_RES += $(commands_recovery_local_path)/gui/materialised/common/languages
+    TWRP_RES += $(commands_recovery_local_path)/gui/materialised/common/$(word 1,$(subst _, ,$(TW_THEME))).xml
+ifeq ($(wildcard $(TWRP_THEME_LOC)/ui.xml),)
+    $(warning ****************************************************************************)
+    $(warning * TW_THEME is not valid: '$(TW_THEME)')
+    $(warning * Please choose an appropriate TW_THEME or create a new one for your device.)
+    $(warning * Available themes:)
+    $(warning * $(notdir $(wildcard $(commands_recovery_local_path)/gui/materialised/*_*)))
     $(warning ****************************************************************************)
     $(error stopping)
 endif
