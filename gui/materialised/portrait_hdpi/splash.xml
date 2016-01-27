@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<recovery>
+	<details>
+		<resolution width="1080" height="1920"/>
+		<author>TeamWin</author>
+		<title>TWRP</title>
+		<description>Default basic theme</description>
+		<preview>preview.jpg</preview>
+		<themeversion>1</themeversion>
+	</details>
+
+	<resources>
+		<resource name="curtain" type="image" filename="curtain"/>
+	</resources>
+
+	<pages>
+		<page name="splash">
+			<object type="image">
+				<image resource="curtain"/>
+				<placement x="0" y="0"/>
+			</object>
+		</page>
+	</pages>
+</recovery>
