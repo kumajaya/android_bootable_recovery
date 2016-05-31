@@ -162,6 +162,10 @@ ifneq ($(TW_WHITELIST_INPUT),)
   LOCAL_CFLAGS += -DWHITELIST_INPUT=$(TW_WHITELIST_INPUT)
 endif
 
+ifneq ($(TARGET_TAP_TO_WAKE_NODE),)
+  LOCAL_CFLAGS += -DTAP_TO_WAKE_NODE=\"$(TARGET_TAP_TO_WAKE_NODE)\"
+endif
+
 ifeq ($(TW_DISABLE_TTF), true)
     $(warning ****************************************************************************)
     $(warning * TW_DISABLE_TTF support has been deprecated in TWRP.                      *)

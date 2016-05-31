@@ -130,6 +130,29 @@ int vibrate(int timeout_ms)
     return 0;
 }
 
+int enable_tap_to_wake(bool enable)
+{
+#ifdef TAP_TO_WAKE_NODE
+    int fd;
+    int ret;
+
+    fd = open(TAP_TO_WAKE_NODE, O_WRONLY);
+    if (fd < 0)
+        return -1;
+
+    if (enable)
+        ret = write(fd, "1\n", 2);
+    else
+        ret = write(fd, "0\n", 2);
+
+    close(fd);
+
+    if (ret < 0)
+       return -1;
+#endif
+    return 0;
+}
+
 /* Returns empty tokens */
 static char *vk_strtok_r(char *str, const char *delim, char **save_str)
 {

@@ -745,6 +745,7 @@ extern "C" int gui_init(void)
 	}
 
 	ev_init();
+	enable_tap_to_wake(true);
 	return 0;
 }
 
