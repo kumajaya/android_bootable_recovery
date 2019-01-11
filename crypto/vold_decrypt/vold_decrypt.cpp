@@ -801,8 +801,13 @@ int Exec_vdc_cryptfs(const string& command, const string& argument, vdc_ReturnVa
 		}
 	}
 
+#ifdef TW_CRYPTO_USE_SBIN_VOLD
+	const char *cmd[] = { "/sbin/vdc", "cryptfs" };
+	const char *env[] = { "LD_LIBRARY_PATH=/sbin:/vendor/lib", NULL };
+#else
 	const char *cmd[] = { "/system/bin/vdc", "cryptfs" };
 	const char *env[] = { "LD_LIBRARY_PATH=/system/lib64:/system/lib", NULL };
+#endif
 
 #ifdef TW_CRYPTO_SYSTEM_VOLD_DEBUG
 	string log_name = "/tmp/strace_vdc_" + command;
@@ -1013,6 +1018,16 @@ int Vold_Decrypt_Core(const string& Password) {
 		return VD_ERR_PASSWORD_EMPTY;
 	}
 
+#ifdef TW_CRYPTO_USE_SBIN_VOLD
+	// Check for vold and vdc
+	if (!TWFunc::Path_Exists("/sbin/vold")) {
+		LOGINFO("ERROR: /sbin/vold not found, aborting.\n");
+		return VD_ERR_MISSING_VOLD;
+	} else if (!TWFunc::Path_Exists("/sbin/vdc")) {
+		LOGINFO("ERROR: /sbin/vdc not found, aborting.\n");
+		return VD_ERR_MISSING_VDC;
+	}
+#else
 	// Mount system and check for vold and vdc
 	if (!PartitionManager.Mount_By_Path("/system", true)) {
 		return VD_ERR_UNABLE_TO_MOUNT_SYSTEM;
@@ -1023,6 +1038,7 @@ int Vold_Decrypt_Core(const string& Password) {
 		LOGINFO("ERROR: /system/bin/vdc not found, aborting.\n");
 		return VD_ERR_MISSING_VDC;
 	}
+#endif
 
 	fp_kmsg = fopen("/dev/kmsg", "a");
 
@@ -1109,12 +1125,14 @@ int Vold_Decrypt_Core(const string& Password) {
 	if (is_fstab_symlinked)
 		Restore_Recovery_Fstab();
 
+#ifndef TW_CRYPTO_USE_SBIN_VOLD
 	if (!PartitionManager.UnMount_By_Path("/system", true)) {
 		// PartitionManager failed to unmount /system, this should not happen,
 		// but in case it does, do a lazy unmount
 		LOGINFO("WARNING: system could not be unmounted normally!\n");
 		umount2("/system", MNT_DETACH);
 	}
+#endif
 
 	LOGINFO("Finished.\n");
 

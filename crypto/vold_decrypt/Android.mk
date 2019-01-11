@@ -31,6 +31,7 @@ ifeq ($(TW_INCLUDE_CRYPTO), true)
         rc_files := $(foreach item,$(services),init.recovery.vold_decrypt.$(item).rc)
 
 
+        ifeq ($(TW_CRYPTO_USE_SBIN_VOLD),)
         include $(CLEAR_VARS)
         LOCAL_MODULE := init.recovery.vold_decrypt.rc
         LOCAL_MODULE_TAGS := eng
@@ -65,6 +66,7 @@ ifeq ($(TW_INCLUDE_CRYPTO), true)
         endif
 
         include $(BUILD_PREBUILT)
+        endif
 
 
         include $(CLEAR_VARS)
@@ -95,6 +97,10 @@ ifeq ($(TW_INCLUDE_CRYPTO), true)
                 LOCAL_CFLAGS += -DTW_CRYPTO_SYSTEM_VOLD_DEBUG
                 LOCAL_CFLAGS += -DVD_STRACE_BIN=\"$(TW_CRYPTO_SYSTEM_VOLD_DEBUG)\"
             endif
+        endif
+
+        ifeq ($(TW_CRYPTO_USE_SBIN_VOLD),true)
+            LOCAL_CFLAGS += -DTW_CRYPTO_USE_SBIN_VOLD
         endif
 
         LOCAL_SRC_FILES = vold_decrypt.cpp
