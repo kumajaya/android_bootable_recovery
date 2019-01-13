@@ -803,7 +803,7 @@ int Exec_vdc_cryptfs(const string& command, const string& argument, vdc_ReturnVa
 
 #ifdef TW_CRYPTO_USE_SBIN_VOLD
 	const char *cmd[] = { "/sbin/vdc", "cryptfs" };
-	const char *env[] = { "LD_LIBRARY_PATH=/sbin:/vendor/lib", NULL };
+	const char *env[] = { "LD_LIBRARY_PATH=/sbin:/vendor/lib:/vendor/lib64", NULL };
 #else
 	const char *cmd[] = { "/system/bin/vdc", "cryptfs" };
 	const char *env[] = { "LD_LIBRARY_PATH=/system/lib64:/system/lib", NULL };
@@ -1018,16 +1018,7 @@ int Vold_Decrypt_Core(const string& Password) {
 		return VD_ERR_PASSWORD_EMPTY;
 	}
 
-#ifdef TW_CRYPTO_USE_SBIN_VOLD
-	// Check for vold and vdc
-	if (!TWFunc::Path_Exists("/sbin/vold")) {
-		LOGINFO("ERROR: /sbin/vold not found, aborting.\n");
-		return VD_ERR_MISSING_VOLD;
-	} else if (!TWFunc::Path_Exists("/sbin/vdc")) {
-		LOGINFO("ERROR: /sbin/vdc not found, aborting.\n");
-		return VD_ERR_MISSING_VDC;
-	}
-#else
+#ifndef TW_CRYPTO_USE_SBIN_VOLD
 	// Mount system and check for vold and vdc
 	if (!PartitionManager.Mount_By_Path("/system", true)) {
 		return VD_ERR_UNABLE_TO_MOUNT_SYSTEM;

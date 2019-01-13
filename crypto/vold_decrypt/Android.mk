@@ -31,7 +31,6 @@ ifeq ($(TW_INCLUDE_CRYPTO), true)
         rc_files := $(foreach item,$(services),init.recovery.vold_decrypt.$(item).rc)
 
 
-        ifeq ($(TW_CRYPTO_USE_SBIN_VOLD),)
         include $(CLEAR_VARS)
         LOCAL_MODULE := init.recovery.vold_decrypt.rc
         LOCAL_MODULE_TAGS := eng
@@ -42,7 +41,11 @@ ifeq ($(TW_INCLUDE_CRYPTO), true)
         # from TARGET_ROOT_OUT thereafter
         LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT)
 
-        LOCAL_SRC_FILES := $(LOCAL_MODULE)
+        ifeq ($(TW_CRYPTO_USE_SBIN_VOLD),true)
+            LOCAL_SRC_FILES := init.recovery.sbin_vold_decrypt.rc
+        else
+            LOCAL_SRC_FILES := $(LOCAL_MODULE)
+        endif
 
         # Add additional .rc files and imports into init.recovery.vold_decrypt.rc
         # Note: any init.recovery.vold_decrypt.{service}.rc that are not default
@@ -66,7 +69,6 @@ ifeq ($(TW_INCLUDE_CRYPTO), true)
         endif
 
         include $(BUILD_PREBUILT)
-        endif
 
 
         include $(CLEAR_VARS)
